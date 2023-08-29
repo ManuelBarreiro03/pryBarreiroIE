@@ -52,10 +52,28 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSeguros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguros.Designer.cs">
+      <DependentUpon>frmSeguros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanas.Designer.cs">
+      <DependentUpon>frmVentanas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguros.resx">
+      <DependentUpon>frmSeguros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanas.resx">
+      <DependentUpon>frmVentanas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

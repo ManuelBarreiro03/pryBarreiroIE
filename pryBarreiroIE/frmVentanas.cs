@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace pryBarreiroIE
 {
-    public partial class frmPrincipal : Form
+    public partial class frmVentanas : Form
     {
-        public frmPrincipal()
+        public frmVentanas()
         {
             InitializeComponent();
         }
 
-        private void cmdIniciar_Click(object sender, EventArgs e)
+        private void cmdSeguros_Click(object sender, EventArgs e)
         {
-            frmVentanas frmVentanas = new frmVentanas();    
-            frmVentanas.ShowDialog();
+            frmSeguros frmSeguros = new frmSeguros();
+            frmSeguros.ShowDialog();
         }
     }
 }
