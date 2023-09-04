@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pryBarreiroIE
 {
@@ -20,7 +21,14 @@ namespace pryBarreiroIE
         private void cmdSeguros_Click(object sender, EventArgs e)
         {
             frmSeguros frmSeguros = new frmSeguros();
+            this.Hide();
             frmSeguros.ShowDialog();
+        }
+
+        private void cmdUbicacionCarpeta_Click(object sender, EventArgs e)
+        {
+            frmCarpetas frmCarpetas = new frmCarpetas();
+            frmCarpetas.ShowDialog();
         }
     }
 }

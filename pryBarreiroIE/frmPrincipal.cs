@@ -19,8 +19,10 @@ namespace pryBarreiroIE
 
         private void cmdIniciar_Click(object sender, EventArgs e)
         {
-            frmVentanas frmVentanas = new frmVentanas();    
+            frmVentanas frmVentanas = new frmVentanas();   
+            this.Hide();
             frmVentanas.ShowDialog();
+            this.Close();
         }
     }
 }
