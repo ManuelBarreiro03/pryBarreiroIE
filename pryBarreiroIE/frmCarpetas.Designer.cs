@@ -39,7 +39,7 @@
             // 
             this.cmdUbicacion.Location = new System.Drawing.Point(12, 12);
             this.cmdUbicacion.Name = "cmdUbicacion";
-            this.cmdUbicacion.Size = new System.Drawing.Size(140, 49);
+            this.cmdUbicacion.Size = new System.Drawing.Size(177, 49);
             this.cmdUbicacion.TabIndex = 0;
             this.cmdUbicacion.Text = "Ubicacion de carpeta";
             this.cmdUbicacion.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@
             this.cmdCrearArchivo.Enabled = false;
             this.cmdCrearArchivo.Location = new System.Drawing.Point(12, 195);
             this.cmdCrearArchivo.Name = "cmdCrearArchivo";
-            this.cmdCrearArchivo.Size = new System.Drawing.Size(140, 49);
+            this.cmdCrearArchivo.Size = new System.Drawing.Size(177, 49);
             this.cmdCrearArchivo.TabIndex = 1;
             this.cmdCrearArchivo.Text = "Crear archivo";
             this.cmdCrearArchivo.UseVisualStyleBackColor = true;
@@ -72,21 +72,21 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtNombre.Location = new System.Drawing.Point(12, 145);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(158, 26);
+            this.txtNombre.Size = new System.Drawing.Size(177, 26);
             this.txtNombre.TabIndex = 3;
             // 
             // frmCarpetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 293);
+            this.ClientSize = new System.Drawing.Size(281, 293);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.cmdCrearArchivo);
             this.Controls.Add(this.cmdUbicacion);
             this.Name = "frmCarpetas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCarpetas";
+            this.Text = "Carpetas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

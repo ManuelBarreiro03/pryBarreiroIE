@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pryBarreiroIE
 {
@@ -17,6 +18,22 @@ namespace pryBarreiroIE
             InitializeComponent();
         }
 
-        
+        private void PopulateTreeView() 
+        {
+            TreeNode nodoMadre;
+
+            DirectoryInfo info = new DirectoryInfo(@"../..");
+            if (info.Exists )
+            {
+                nodoMadre = new TreeNode(info.Name);
+                nodoMadre.Tag = info;
+                treeView1.Nodes.Add(nodoMadre);
+            }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }
