@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.cmdIniciar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pcbLogo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 174);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pcbLogo.Image = global::pryBarreiroIE.Properties.Resources.Empresa;
+            this.pcbLogo.Location = new System.Drawing.Point(12, 12);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(225, 129);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.TabIndex = 0;
+            this.pcbLogo.TabStop = false;
             // 
             // cmdIniciar
             // 
-            this.cmdIniciar.Location = new System.Drawing.Point(12, 192);
+            this.cmdIniciar.Location = new System.Drawing.Point(12, 147);
             this.cmdIniciar.Name = "cmdIniciar";
-            this.cmdIniciar.Size = new System.Drawing.Size(357, 37);
+            this.cmdIniciar.Size = new System.Drawing.Size(225, 37);
             this.cmdIniciar.TabIndex = 1;
             this.cmdIniciar.Text = "Iniciar";
             this.cmdIniciar.UseVisualStyleBackColor = true;
@@ -55,20 +58,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 238);
+            this.ClientSize = new System.Drawing.Size(248, 195);
             this.Controls.Add(this.cmdIniciar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pcbLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Button cmdIniciar;
     }
 }

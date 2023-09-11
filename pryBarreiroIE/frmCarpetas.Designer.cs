@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarpetas));
             this.VentanaCarpetas = new System.Windows.Forms.FolderBrowserDialog();
             this.cmdUbicacion = new System.Windows.Forms.Button();
             this.cmdCrearArchivo = new System.Windows.Forms.Button();
@@ -84,6 +85,9 @@
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.cmdCrearArchivo);
             this.Controls.Add(this.cmdUbicacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCarpetas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carpetas";

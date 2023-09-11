@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentanas));
             this.cmdSeguros = new System.Windows.Forms.Button();
             this.cmdUbicacionCarpeta = new System.Windows.Forms.Button();
             this.VentanaCarpetas = new System.Windows.Forms.FolderBrowserDialog();
@@ -35,7 +36,7 @@
             // 
             // cmdSeguros
             // 
-            this.cmdSeguros.Location = new System.Drawing.Point(235, 317);
+            this.cmdSeguros.Location = new System.Drawing.Point(12, 12);
             this.cmdSeguros.Name = "cmdSeguros";
             this.cmdSeguros.Size = new System.Drawing.Size(179, 61);
             this.cmdSeguros.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // cmdUbicacionCarpeta
             // 
-            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 317);
+            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 96);
             this.cmdUbicacionCarpeta.Name = "cmdUbicacionCarpeta";
             this.cmdUbicacionCarpeta.Size = new System.Drawing.Size(179, 61);
             this.cmdUbicacionCarpeta.TabIndex = 1;
@@ -57,9 +58,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 390);
+            this.ClientSize = new System.Drawing.Size(213, 175);
             this.Controls.Add(this.cmdUbicacionCarpeta);
             this.Controls.Add(this.cmdSeguros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmVentanas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventanas";
