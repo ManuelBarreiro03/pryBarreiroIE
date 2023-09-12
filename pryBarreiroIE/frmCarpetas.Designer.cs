@@ -34,6 +34,11 @@
             this.cmdCrearArchivo = new System.Windows.Forms.Button();
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cmdCargaArchivo = new System.Windows.Forms.Button();
+            this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.cmdRegistrar = new System.Windows.Forms.Button();
+            this.txtRegistrar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdUbicacion
@@ -49,7 +54,7 @@
             // cmdCrearArchivo
             // 
             this.cmdCrearArchivo.Enabled = false;
-            this.cmdCrearArchivo.Location = new System.Drawing.Point(12, 195);
+            this.cmdCrearArchivo.Location = new System.Drawing.Point(12, 99);
             this.cmdCrearArchivo.Name = "cmdCrearArchivo";
             this.cmdCrearArchivo.Size = new System.Drawing.Size(177, 49);
             this.cmdCrearArchivo.TabIndex = 1;
@@ -61,7 +66,7 @@
             // 
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
-            this.lblUbicacion.Location = new System.Drawing.Point(12, 85);
+            this.lblUbicacion.Location = new System.Drawing.Point(195, 25);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(148, 36);
             this.lblUbicacion.TabIndex = 2;
@@ -71,16 +76,56 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.txtNombre.Location = new System.Drawing.Point(12, 145);
+            this.txtNombre.Location = new System.Drawing.Point(12, 67);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(177, 26);
             this.txtNombre.TabIndex = 3;
+            // 
+            // cmdCargaArchivo
+            // 
+            this.cmdCargaArchivo.Location = new System.Drawing.Point(12, 154);
+            this.cmdCargaArchivo.Name = "cmdCargaArchivo";
+            this.cmdCargaArchivo.Size = new System.Drawing.Size(177, 49);
+            this.cmdCargaArchivo.TabIndex = 4;
+            this.cmdCargaArchivo.Text = "Cargar Aseguradores";
+            this.cmdCargaArchivo.UseVisualStyleBackColor = true;
+            this.cmdCargaArchivo.Click += new System.EventHandler(this.cmdCargaArchivo_Click);
+            // 
+            // dgvGrilla
+            // 
+            this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrilla.Location = new System.Drawing.Point(212, 105);
+            this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.Size = new System.Drawing.Size(391, 241);
+            this.dgvGrilla.TabIndex = 5;
+            // 
+            // cmdRegistrar
+            // 
+            this.cmdRegistrar.Location = new System.Drawing.Point(12, 209);
+            this.cmdRegistrar.Name = "cmdRegistrar";
+            this.cmdRegistrar.Size = new System.Drawing.Size(177, 49);
+            this.cmdRegistrar.TabIndex = 6;
+            this.cmdRegistrar.Text = "Registrar";
+            this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
+            // 
+            // txtRegistrar
+            // 
+            this.txtRegistrar.Location = new System.Drawing.Point(14, 268);
+            this.txtRegistrar.Multiline = true;
+            this.txtRegistrar.Name = "txtRegistrar";
+            this.txtRegistrar.Size = new System.Drawing.Size(174, 78);
+            this.txtRegistrar.TabIndex = 7;
             // 
             // frmCarpetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 293);
+            this.ClientSize = new System.Drawing.Size(610, 358);
+            this.Controls.Add(this.txtRegistrar);
+            this.Controls.Add(this.cmdRegistrar);
+            this.Controls.Add(this.dgvGrilla);
+            this.Controls.Add(this.cmdCargaArchivo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.cmdCrearArchivo);
@@ -91,6 +136,7 @@
             this.Name = "frmCarpetas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carpetas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +149,9 @@
         private System.Windows.Forms.Button cmdCrearArchivo;
         private System.Windows.Forms.Label lblUbicacion;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button cmdCargaArchivo;
+        private System.Windows.Forms.DataGridView dgvGrilla;
+        private System.Windows.Forms.Button cmdRegistrar;
+        private System.Windows.Forms.TextBox txtRegistrar;
     }
 }
