@@ -39,7 +39,9 @@ namespace pryBarreiroIE
 
         private void cmdCargaArchivo_Click(object sender, EventArgs e)
         {
-            StreamReader srProveedor = new StreamReader("baseproveedores.csv");
+            dgvGrilla.Rows.Clear();
+            dgvGrilla.Columns.Clear();
+            StreamReader srProveedor = new StreamReader(@"../../"+ "resources/Base Proveedores.csv");
             leerLinea = srProveedor.ReadLine();
             separarDatos = leerLinea.Split(';');
             for (int i = 0; i < separarDatos.Length; i++) 
@@ -63,6 +65,32 @@ namespace pryBarreiroIE
             MessageBox.Show("registrado", "registrado", MessageBoxButtons.OK);
             txtRegistrar.Text = "";
             txtRegistrar.Focus();
+        }
+        private void cmdVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
+        }
+
+        private void cmdCargarAseguradores_Click(object sender, EventArgs e)
+        {
+            dgvGrilla.Rows.Clear();
+            dgvGrilla.Columns.Clear();
+            StreamReader srProveedor = new StreamReader(@"../../" + "resources/Listado de aseguradores.csv");
+            leerLinea = srProveedor.ReadLine();
+            separarDatos = leerLinea.Split(';');
+            for (int i = 0; i < separarDatos.Length; i++)
+            {
+                dgvGrilla.Columns.Add(separarDatos[i], separarDatos[i]);
+            }
+            while (srProveedor.EndOfStream == false)
+            {
+                leerLinea = srProveedor.ReadLine();
+                separarDatos = leerLinea.Split(';');
+                dgvGrilla.Rows.Add(separarDatos);
+            }
+            srProveedor.Close();
         }
     }
 }
