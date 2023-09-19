@@ -29,20 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.cmdIniciar = new System.Windows.Forms.Button();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pcbLogo
-            // 
-            this.pcbLogo.Image = global::pryBarreiroIE.Properties.Resources.Empresa;
-            this.pcbLogo.Location = new System.Drawing.Point(12, 12);
-            this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(225, 129);
-            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbLogo.TabIndex = 0;
-            this.pcbLogo.TabStop = false;
             // 
             // cmdIniciar
             // 
@@ -53,6 +43,16 @@
             this.cmdIniciar.Text = "Iniciar";
             this.cmdIniciar.UseVisualStyleBackColor = true;
             this.cmdIniciar.Click += new System.EventHandler(this.cmdIniciar_Click);
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.Image = global::pryBarreiroIE.Properties.Resources.Empresa;
+            this.pcbLogo.Location = new System.Drawing.Point(12, 12);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(225, 129);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.TabIndex = 0;
+            this.pcbLogo.TabStop = false;
             // 
             // frmPrincipal
             // 

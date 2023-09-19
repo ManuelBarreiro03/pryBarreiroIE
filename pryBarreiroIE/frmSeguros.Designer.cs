@@ -34,11 +34,11 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imagenList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.cmdVolver = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmdVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -86,6 +86,17 @@
             this.splitContainer1.SplitterDistance = 228;
             this.splitContainer1.TabIndex = 1;
             // 
+            // cmdVolver
+            // 
+            this.cmdVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdVolver.Location = new System.Drawing.Point(12, 322);
+            this.cmdVolver.Name = "cmdVolver";
+            this.cmdVolver.Size = new System.Drawing.Size(111, 39);
+            this.cmdVolver.TabIndex = 1;
+            this.cmdVolver.Text = "Volver";
+            this.cmdVolver.UseVisualStyleBackColor = true;
+            this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -113,17 +124,6 @@
             // Detalle
             // 
             this.Detalle.Text = "Detalle";
-            // 
-            // cmdVolver
-            // 
-            this.cmdVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmdVolver.Location = new System.Drawing.Point(12, 322);
-            this.cmdVolver.Name = "cmdVolver";
-            this.cmdVolver.Size = new System.Drawing.Size(111, 39);
-            this.cmdVolver.TabIndex = 1;
-            this.cmdVolver.Text = "Volver";
-            this.cmdVolver.UseVisualStyleBackColor = true;
-            this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
             // frmSeguros
             // 

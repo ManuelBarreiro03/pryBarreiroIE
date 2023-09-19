@@ -23,10 +23,5 @@ namespace pryBarreiroIE
             this.Hide();
             frmVentanas.ShowDialog();
         }
-
-        private void frmCargaVentas_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
