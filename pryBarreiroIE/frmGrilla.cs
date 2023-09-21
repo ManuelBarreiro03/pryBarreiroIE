@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace pryBarreiroIE
 {
-    public partial class frmCargaVentas : Form
+    public partial class frmGrilla : Form
     {
-        public frmCargaVentas()
+        public frmGrilla()
         {
             InitializeComponent();
-        }
-
-        private void cmdVolver_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
         }
     }
 }

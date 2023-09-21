@@ -1,6 +1,6 @@
 ﻿namespace pryBarreiroIE
 {
-    partial class frmCarpetas
+    partial class frmCreacionArchivos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarpetas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreacionArchivos));
             this.VentanaCarpetas = new System.Windows.Forms.FolderBrowserDialog();
             this.cmdUbicacion = new System.Windows.Forms.Button();
             this.cmdCrearArchivo = new System.Windows.Forms.Button();
@@ -169,7 +169,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCarpetas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Carpetas";
+            this.Text = "Creacion de archivos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

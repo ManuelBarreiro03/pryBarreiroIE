@@ -41,17 +41,17 @@
             this.cmdSeguros.Name = "cmdSeguros";
             this.cmdSeguros.Size = new System.Drawing.Size(179, 61);
             this.cmdSeguros.TabIndex = 0;
-            this.cmdSeguros.Text = "Proveedores";
+            this.cmdSeguros.Text = "Muestra Archivos";
             this.cmdSeguros.UseVisualStyleBackColor = true;
             this.cmdSeguros.Click += new System.EventHandler(this.cmdSeguros_Click);
             // 
             // cmdUbicacionCarpeta
             // 
-            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 96);
+            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 93);
             this.cmdUbicacionCarpeta.Name = "cmdUbicacionCarpeta";
             this.cmdUbicacionCarpeta.Size = new System.Drawing.Size(179, 61);
             this.cmdUbicacionCarpeta.TabIndex = 1;
-            this.cmdUbicacionCarpeta.Text = "Archivos";
+            this.cmdUbicacionCarpeta.Text = "Creacion de archivos";
             this.cmdUbicacionCarpeta.UseVisualStyleBackColor = true;
             this.cmdUbicacionCarpeta.Click += new System.EventHandler(this.cmdUbicacionCarpeta_Click);
             // 
@@ -61,7 +61,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 61);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Carga Venta";
+            this.button1.Text = "Carga ABM ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

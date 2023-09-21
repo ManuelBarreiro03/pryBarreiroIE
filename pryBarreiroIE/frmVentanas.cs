@@ -20,21 +20,21 @@ namespace pryBarreiroIE
 
         private void cmdSeguros_Click(object sender, EventArgs e)
         {
-            frmSeguros frmSeguros = new frmSeguros();
+            frmMuestraArchivos frmSeguros = new frmMuestraArchivos();
             this.Hide();
             frmSeguros.ShowDialog();
         }
 
         private void cmdUbicacionCarpeta_Click(object sender, EventArgs e)
         {
-            frmCarpetas frmCarpetas = new frmCarpetas();
+            frmCreacionArchivos frmCarpetas = new frmCreacionArchivos();
             this.Hide();
             frmCarpetas.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmCargaVentas frmCargaVentas = new frmCargaVentas();
+            frmCargaABM frmCargaVentas = new frmCargaABM();
             this.Hide();
             frmCargaVentas.ShowDialog();
         }

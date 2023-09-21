@@ -12,12 +12,12 @@ using System.IO;
 namespace pryBarreiroIE
 {
 
-    public partial class frmCarpetas : Form
+    public partial class frmCreacionArchivos : Form
     {
         string ruta;
         string leerLinea;
         string[] separarDatos;
-        public frmCarpetas()
+        public frmCreacionArchivos()
         {
             InitializeComponent();
         }

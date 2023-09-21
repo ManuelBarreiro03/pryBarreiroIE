@@ -50,17 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCargaVentas.cs">
+    <Compile Include="frmCargaABM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCargaVentas.Designer.cs">
-      <DependentUpon>frmCargaVentas.cs</DependentUpon>
+    <Compile Include="frmCargaABM.Designer.cs">
+      <DependentUpon>frmCargaABM.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCarpetas.cs">
+    <Compile Include="frmCreacionArchivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCarpetas.Designer.cs">
-      <DependentUpon>frmCarpetas.cs</DependentUpon>
+    <Compile Include="frmCreacionArchivos.Designer.cs">
+      <DependentUpon>frmCreacionArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrilla.Designer.cs">
+      <DependentUpon>frmGrilla.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -68,11 +74,11 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSeguros.cs">
+    <Compile Include="frmMuestraArchivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSeguros.Designer.cs">
-      <DependentUpon>frmSeguros.cs</DependentUpon>
+    <Compile Include="frmMuestraArchivos.Designer.cs">
+      <DependentUpon>frmMuestraArchivos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVentanas.cs">
       <SubType>Form</SubType>
@@ -82,17 +88,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCargaVentas.resx">
-      <DependentUpon>frmCargaVentas.cs</DependentUpon>
+    <EmbeddedResource Include="frmCargaABM.resx">
+      <DependentUpon>frmCargaABM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCarpetas.resx">
-      <DependentUpon>frmCarpetas.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreacionArchivos.resx">
+      <DependentUpon>frmCreacionArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrilla.resx">
+      <DependentUpon>frmGrilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSeguros.resx">
-      <DependentUpon>frmSeguros.cs</DependentUpon>
+    <EmbeddedResource Include="frmMuestraArchivos.resx">
+      <DependentUpon>frmMuestraArchivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanas.resx">
       <DependentUpon>frmVentanas.cs</DependentUpon>

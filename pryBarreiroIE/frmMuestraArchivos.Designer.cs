@@ -1,6 +1,6 @@
 ﻿namespace pryBarreiroIE
 {
-    partial class frmSeguros
+    partial class frmMuestraArchivos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeguros));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMuestraArchivos));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imagenList1 = new System.Windows.Forms.ImageList(this.components);

@@ -11,9 +11,9 @@ using System.IO;
 
 namespace pryBarreiroIE
 {
-    public partial class frmSeguros : Form
+    public partial class frmMuestraArchivos : Form
     {
-        public frmSeguros()
+        public frmMuestraArchivos()
         {
             InitializeComponent();
             LlenarTreeView();
