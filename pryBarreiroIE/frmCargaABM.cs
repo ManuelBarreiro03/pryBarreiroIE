@@ -20,7 +20,7 @@ namespace pryBarreiroIE
             InitializeComponent();
         }
 
-        private void cmdVolver_Click(object sender, EventArgs e)
+        private void cmdVolver1_Click(object sender, EventArgs e)
         {
             frmVentanas frmVentanas = new frmVentanas();
             this.Hide();
@@ -33,12 +33,7 @@ namespace pryBarreiroIE
             this.Hide();
             frmVentanas.ShowDialog();
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void cmdCargarGrilla_Click(object sender, EventArgs e)
         {
             dgvProveedores.Rows.Clear();
@@ -78,5 +73,6 @@ namespace pryBarreiroIE
             }
             srProveedor.Close();
         }
+
     }
 }

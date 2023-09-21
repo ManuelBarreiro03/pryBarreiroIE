@@ -83,6 +83,7 @@
             this.lblLiquiResp2 = new System.Windows.Forms.Label();
             this.cmdCargarGrilla2 = new System.Windows.Forms.Button();
             this.tbcAltaBaja = new System.Windows.Forms.TabControl();
+            this.cmdVolver1 = new System.Windows.Forms.Button();
             this.tbpProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -165,6 +166,7 @@
             // 
             // tbpProveedores
             // 
+            this.tbpProveedores.Controls.Add(this.cmdVolver1);
             this.tbpProveedores.Controls.Add(this.cmdCargarGrilla1);
             this.tbpProveedores.Controls.Add(this.dgvProveedores);
             this.tbpProveedores.Controls.Add(this.txtJurisdiccion1);
@@ -198,7 +200,7 @@
             this.cmdAlta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cmdAlta1.Enabled = false;
             this.cmdAlta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAlta1.Location = new System.Drawing.Point(6, 495);
+            this.cmdAlta1.Location = new System.Drawing.Point(6, 503);
             this.cmdAlta1.Name = "cmdAlta1";
             this.cmdAlta1.Size = new System.Drawing.Size(124, 36);
             this.cmdAlta1.TabIndex = 9;
@@ -268,7 +270,7 @@
             this.cmdModificacion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cmdModificacion1.Enabled = false;
             this.cmdModificacion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdModificacion1.Location = new System.Drawing.Point(188, 495);
+            this.cmdModificacion1.Location = new System.Drawing.Point(186, 503);
             this.cmdModificacion1.Name = "cmdModificacion1";
             this.cmdModificacion1.Size = new System.Drawing.Size(124, 36);
             this.cmdModificacion1.TabIndex = 10;
@@ -306,7 +308,7 @@
             this.cmdBaja1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cmdBaja1.Enabled = false;
             this.cmdBaja1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdBaja1.Location = new System.Drawing.Point(370, 495);
+            this.cmdBaja1.Location = new System.Drawing.Point(366, 503);
             this.cmdBaja1.Name = "cmdBaja1";
             this.cmdBaja1.Size = new System.Drawing.Size(124, 36);
             this.cmdBaja1.TabIndex = 11;
@@ -418,7 +420,7 @@
             // 
             this.cmdBaja2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cmdBaja2.Enabled = false;
-            this.cmdBaja2.Location = new System.Drawing.Point(370, 495);
+            this.cmdBaja2.Location = new System.Drawing.Point(370, 503);
             this.cmdBaja2.Name = "cmdBaja2";
             this.cmdBaja2.Size = new System.Drawing.Size(124, 36);
             this.cmdBaja2.TabIndex = 12;
@@ -429,7 +431,7 @@
             // 
             this.cmdModificacion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cmdModificacion2.Enabled = false;
-            this.cmdModificacion2.Location = new System.Drawing.Point(188, 495);
+            this.cmdModificacion2.Location = new System.Drawing.Point(188, 503);
             this.cmdModificacion2.Name = "cmdModificacion2";
             this.cmdModificacion2.Size = new System.Drawing.Size(124, 36);
             this.cmdModificacion2.TabIndex = 11;
@@ -439,7 +441,7 @@
             // cmdVolver2
             // 
             this.cmdVolver2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdVolver2.Location = new System.Drawing.Point(556, 503);
+            this.cmdVolver2.Location = new System.Drawing.Point(552, 503);
             this.cmdVolver2.Name = "cmdVolver2";
             this.cmdVolver2.Size = new System.Drawing.Size(124, 36);
             this.cmdVolver2.TabIndex = 13;
@@ -451,7 +453,7 @@
             // 
             this.cmdAlta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cmdAlta2.Enabled = false;
-            this.cmdAlta2.Location = new System.Drawing.Point(6, 495);
+            this.cmdAlta2.Location = new System.Drawing.Point(6, 503);
             this.cmdAlta2.Name = "cmdAlta2";
             this.cmdAlta2.Size = new System.Drawing.Size(124, 36);
             this.cmdAlta2.TabIndex = 10;
@@ -624,6 +626,17 @@
             this.tbcAltaBaja.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcAltaBaja.TabIndex = 0;
             // 
+            // cmdVolver1
+            // 
+            this.cmdVolver1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdVolver1.Location = new System.Drawing.Point(546, 503);
+            this.cmdVolver1.Name = "cmdVolver1";
+            this.cmdVolver1.Size = new System.Drawing.Size(124, 36);
+            this.cmdVolver1.TabIndex = 37;
+            this.cmdVolver1.Text = "Volver";
+            this.cmdVolver1.UseVisualStyleBackColor = true;
+            this.cmdVolver1.Click += new System.EventHandler(this.cmdVolver1_Click);
+            // 
             // frmCargaABM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,5 +716,6 @@
         private System.Windows.Forms.Button cmdModificacion2;
         private System.Windows.Forms.Button cmdBaja2;
         private System.Windows.Forms.TabControl tbcAltaBaja;
+        private System.Windows.Forms.Button cmdVolver1;
     }
 }
