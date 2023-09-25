@@ -80,7 +80,7 @@ namespace pryBarreiroIE
             }
             else
             {
-                VectorDatos[1] = txtNumero2.Text;
+                VectorDatos[0] = txtNumero2.Text;
                 if (txtEntidad2.Text == "")
                 {
                     MessageBox.Show("Coloque Entidad", "Error", MessageBoxButtons.OK);
@@ -96,7 +96,7 @@ namespace pryBarreiroIE
                     }
                     else
                     {
-                        VectorDatos[1] = txtApertura2.Text;
+                        VectorDatos[2] = txtApertura2.Text;
                         if (txtNExpte2.Text == "")
                         {
                             MessageBox.Show("Coloque Nº Expte", "Error", MessageBoxButtons.OK);
@@ -104,7 +104,7 @@ namespace pryBarreiroIE
                         }
                         else
                         {
-                            VectorDatos[1] = txtNExpte2.Text;
+                            VectorDatos[3] = txtNExpte2.Text;
                             if (txtJurisdiccion2.Text == "")
                             {
                                 MessageBox.Show("Coloque Jurisdicción", "Error", MessageBoxButtons.OK);
@@ -112,7 +112,7 @@ namespace pryBarreiroIE
                             }
                             else
                             {
-                                VectorDatos[1] = txtJurisdiccion2.Text;
+                                VectorDatos[4] = txtJurisdiccion2.Text;
                                 if (txtDireccion2.Text == "")
                                 {
                                     MessageBox.Show("Coloque Dirección", "Error", MessageBoxButtons.OK);
@@ -120,7 +120,7 @@ namespace pryBarreiroIE
                                 }
                                 else
                                 {
-                                    VectorDatos[1] = txtDireccion2.Text;
+                                    VectorDatos[5] = txtDireccion2.Text;
                                     if (txtLiquiResp2.Text == "")
                                     {
                                         MessageBox.Show("Coloque Liqui. Resp.", "Error", MessageBoxButtons.OK);
@@ -128,7 +128,7 @@ namespace pryBarreiroIE
                                     }
                                     else
                                     {
-                                        VectorDatos[1] = txtLiquiResp2.Text;
+                                        VectorDatos[6] = txtLiquiResp2.Text;
                                         cmdAlta2.Enabled = true;
                                         cmdBaja2.Enabled = true;
                                         cmdModificacion2.Enabled = true;
