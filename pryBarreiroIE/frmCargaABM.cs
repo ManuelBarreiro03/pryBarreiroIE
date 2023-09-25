@@ -15,6 +15,7 @@ namespace pryBarreiroIE
     {
         string leerLinea;
         string[] separarDatos;
+        public Array Datos[1,8];
         public frmCargaABM()
         {
             InitializeComponent();
@@ -33,9 +34,25 @@ namespace pryBarreiroIE
             this.Hide();
             frmVentanas.ShowDialog();
         }
-       
-        private void cmdCargarGrilla_Click(object sender, EventArgs e)
+
+        private void frmCargaABM_Load(object sender, EventArgs e)
         {
+            dgvAseguradores.Rows.Clear();
+            dgvAseguradores.Columns.Clear();
+            StreamReader srAseguradores = new StreamReader(@"../../" + "resources/Listado de aseguradores.csv");
+            leerLinea = srAseguradores.ReadLine();
+            separarDatos = leerLinea.Split(';');
+            for (int i = 0; i < separarDatos.Length; i++)
+            {
+                dgvAseguradores.Columns.Add(separarDatos[i], separarDatos[i]);
+            }
+            while (srAseguradores.EndOfStream == false)
+            {
+                leerLinea = srAseguradores.ReadLine();
+                separarDatos = leerLinea.Split(';');
+                dgvAseguradores.Rows.Add(separarDatos);
+            }
+            srAseguradores.Close();
             dgvProveedores.Rows.Clear();
             dgvProveedores.Columns.Clear();
             StreamReader srProveedor = new StreamReader(@"../../" + "resources/Base Proveedores.csv");
@@ -54,25 +71,135 @@ namespace pryBarreiroIE
             srProveedor.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmdVerificar2_Click(object sender, EventArgs e)
         {
-            dgvAseguradores.Rows.Clear();
-            dgvAseguradores.Columns.Clear();
-            StreamReader srProveedor = new StreamReader(@"../../" + "resources/Listado de aseguradores.csv");
-            leerLinea = srProveedor.ReadLine();
-            separarDatos = leerLinea.Split(';');
-            for (int i = 0; i < separarDatos.Length; i++)
+            if (txtNumero2.Text == "")
             {
-                dgvAseguradores.Columns.Add(separarDatos[i], separarDatos[i]);
+                MessageBox.Show("Coloque Numero", "Error", MessageBoxButtons.OK);
+                txtNumero2.Focus();
             }
-            while (srProveedor.EndOfStream == false)
+            else
             {
-                leerLinea = srProveedor.ReadLine();
-                separarDatos = leerLinea.Split(';');
-                dgvAseguradores.Rows.Add(separarDatos);
+                if (txtEntidad2.Text == "")
+                {
+                    MessageBox.Show("Coloque Entidad", "Error", MessageBoxButtons.OK);
+                    txtEntidad2.Focus();
+                }
+                else
+                {
+                    if (txtApertura2.Text == "")
+                    {
+                        MessageBox.Show("Coloque Apertura", "Error", MessageBoxButtons.OK);
+                        txtApertura2.Focus();
+                    }
+                    else
+                    {
+                        if (txtNExpte2.Text == "")
+                        {
+                            MessageBox.Show("Coloque Nº Expte", "Error", MessageBoxButtons.OK);
+                            txtNExpte2.Focus();
+                        }
+                        else
+                        {
+                            if (txtJurisdiccion2.Text == "")
+                            {
+                                MessageBox.Show("Coloque Jurisdicción", "Error", MessageBoxButtons.OK);
+                                txtJurisdiccion2.Focus();
+                            }
+                            else
+                            {
+                                if (txtDireccion2.Text == "")
+                                {
+                                    MessageBox.Show("Coloque Dirección", "Error", MessageBoxButtons.OK);
+                                    txtDireccion2.Focus();
+                                }
+                                else
+                                {
+                                    if (txtLiquiResp2.Text == "")
+                                    {
+                                        MessageBox.Show("Coloque Liqui. Resp.", "Error", MessageBoxButtons.OK);
+                                        txtLiquiResp2.Focus();
+                                    }
+                                    else
+                                    {
+                                        cmdAlta2.Enabled = true;
+                                        cmdBaja2.Enabled = true;
+                                        cmdModificacion2.Enabled = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            srProveedor.Close();
         }
 
+        private void cmdVerificar1_Click(object sender, EventArgs e)
+        {
+            if (txtNumero1.Text == "")
+            {
+                MessageBox.Show("Coloque Numero","Error", MessageBoxButtons.OK);
+                txtNumero1.Focus();
+            }
+            else
+            {
+                if (txtEntidad1.Text == "")
+                {
+                    MessageBox.Show("Coloque Entidad", "Error", MessageBoxButtons.OK);
+                    txtEntidad1.Focus();
+                }
+                else
+                {
+                    if (txtApertura1.Text == "")
+                    {
+                        MessageBox.Show("Coloque Apertura", "Error", MessageBoxButtons.OK);
+                        txtApertura1.Focus();
+                    }
+                    else
+                    {
+                        if (txtNExpte1.Text == "")
+                        {
+                            MessageBox.Show("Coloque Nº Expte", "Error", MessageBoxButtons.OK);
+                            txtNExpte1.Focus();
+                        }
+                        else
+                        {
+                            if (txtJurisdiccion1.Text == "")
+                            {
+                                MessageBox.Show("Coloque Jurisdicción", "Error", MessageBoxButtons.OK);
+                                txtJurisdiccion1.Focus();
+                            }
+                            else
+                            {
+                                if (txtDireccion1.Text == "")
+                                {
+                                    MessageBox.Show("Coloque Dirección","Error", MessageBoxButtons.OK);
+                                    txtDireccion1.Focus();
+                                }
+                                else
+                                {
+                                    if (txtLiquiResp1.Text == "")
+                                    {
+                                        MessageBox.Show("Coloque Liqui. Resp.", "Error", MessageBoxButtons.OK);
+                                        txtLiquiResp1.Focus();
+                                    }
+                                    else
+                                    {
+                                        cmdAlta1.Enabled = true;
+                                        cmdBaja1.Enabled = true;
+                                        cmdModificacion1.Enabled = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cmdAlta2_Click(object sender, EventArgs e)
+        {
+            StreamWriter srAlta = new StreamWriter(@"../../" + "resources/Listado de aseguradores.csv");
+        }
     }
 }
