@@ -40,6 +40,7 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblApertura = new System.Windows.Forms.Label();
             this.tbpProveedores = new System.Windows.Forms.TabPage();
+            this.cmdLimpiar1 = new System.Windows.Forms.Button();
             this.cmdVolver1 = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.txtJurisdiccion1 = new System.Windows.Forms.TextBox();
@@ -61,29 +62,28 @@
             this.lblApertura1 = new System.Windows.Forms.Label();
             this.cmdAlta1 = new System.Windows.Forms.Button();
             this.tbcAltaBaja = new System.Windows.Forms.TabControl();
-            this.cmdLimpiar1 = new System.Windows.Forms.Button();
-            this.cmdBaja2 = new System.Windows.Forms.Button();
-            this.cmdModificacion2 = new System.Windows.Forms.Button();
-            this.cmdVolver2 = new System.Windows.Forms.Button();
-            this.cmdAlta2 = new System.Windows.Forms.Button();
-            this.cmdVerificar2 = new System.Windows.Forms.Button();
-            this.txtNumero2 = new System.Windows.Forms.TextBox();
-            this.txtEntidad2 = new System.Windows.Forms.TextBox();
-            this.txtApertura2 = new System.Windows.Forms.TextBox();
-            this.txtNExpte2 = new System.Windows.Forms.TextBox();
-            this.txtJurisdiccion2 = new System.Windows.Forms.TextBox();
-            this.txtDireccion2 = new System.Windows.Forms.TextBox();
-            this.txtLiquiResp2 = new System.Windows.Forms.TextBox();
-            this.lblNumero2 = new System.Windows.Forms.Label();
-            this.lblEntidad2 = new System.Windows.Forms.Label();
-            this.lblApertura2 = new System.Windows.Forms.Label();
-            this.lblNExpte2 = new System.Windows.Forms.Label();
-            this.lblJurisdiccion2 = new System.Windows.Forms.Label();
-            this.lblDireccion2 = new System.Windows.Forms.Label();
-            this.lblLiquiResp2 = new System.Windows.Forms.Label();
-            this.cmdLimpiar2 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmdLimpiar2 = new System.Windows.Forms.Button();
+            this.lblLiquiResp2 = new System.Windows.Forms.Label();
+            this.lblDireccion2 = new System.Windows.Forms.Label();
+            this.lblJurisdiccion2 = new System.Windows.Forms.Label();
+            this.lblNExpte2 = new System.Windows.Forms.Label();
+            this.lblApertura2 = new System.Windows.Forms.Label();
+            this.lblEntidad2 = new System.Windows.Forms.Label();
+            this.lblNumero2 = new System.Windows.Forms.Label();
+            this.txtLiquiResp2 = new System.Windows.Forms.TextBox();
+            this.txtDireccion2 = new System.Windows.Forms.TextBox();
+            this.txtJurisdiccion2 = new System.Windows.Forms.TextBox();
+            this.txtNExpte2 = new System.Windows.Forms.TextBox();
+            this.txtApertura2 = new System.Windows.Forms.TextBox();
+            this.txtEntidad2 = new System.Windows.Forms.TextBox();
+            this.txtNumero2 = new System.Windows.Forms.TextBox();
+            this.cmdVerificar2 = new System.Windows.Forms.Button();
             this.dgvAseguradores = new System.Windows.Forms.DataGridView();
+            this.cmdAlta2 = new System.Windows.Forms.Button();
+            this.cmdVolver2 = new System.Windows.Forms.Button();
+            this.cmdModificacion2 = new System.Windows.Forms.Button();
+            this.cmdBaja2 = new System.Windows.Forms.Button();
             this.tbpProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.tbcAltaBaja.SuspendLayout();
@@ -194,6 +194,17 @@
             this.tbpProveedores.TabIndex = 2;
             this.tbpProveedores.Text = "Proveedores";
             this.tbpProveedores.UseVisualStyleBackColor = true;
+            // 
+            // cmdLimpiar1
+            // 
+            this.cmdLimpiar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLimpiar1.Location = new System.Drawing.Point(342, 419);
+            this.cmdLimpiar1.Name = "cmdLimpiar1";
+            this.cmdLimpiar1.Size = new System.Drawing.Size(146, 37);
+            this.cmdLimpiar1.TabIndex = 38;
+            this.cmdLimpiar1.Text = "Limpiar";
+            this.cmdLimpiar1.UseVisualStyleBackColor = true;
+            this.cmdLimpiar1.Click += new System.EventHandler(this.cmdLimpiar1_Click);
             // 
             // cmdVolver1
             // 
@@ -387,6 +398,7 @@
             this.cmdAlta1.TabIndex = 9;
             this.cmdAlta1.Text = "Alta";
             this.cmdAlta1.UseVisualStyleBackColor = false;
+            this.cmdAlta1.Click += new System.EventHandler(this.cmdAlta1_Click);
             // 
             // tbcAltaBaja
             // 
@@ -399,209 +411,6 @@
             this.tbcAltaBaja.Size = new System.Drawing.Size(698, 571);
             this.tbcAltaBaja.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcAltaBaja.TabIndex = 0;
-            // 
-            // cmdLimpiar1
-            // 
-            this.cmdLimpiar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar1.Location = new System.Drawing.Point(342, 419);
-            this.cmdLimpiar1.Name = "cmdLimpiar1";
-            this.cmdLimpiar1.Size = new System.Drawing.Size(146, 37);
-            this.cmdLimpiar1.TabIndex = 38;
-            this.cmdLimpiar1.Text = "Limpiar";
-            this.cmdLimpiar1.UseVisualStyleBackColor = true;
-            this.cmdLimpiar1.Click += new System.EventHandler(this.cmdLimpiar1_Click);
-            // 
-            // cmdBaja2
-            // 
-            this.cmdBaja2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cmdBaja2.Enabled = false;
-            this.cmdBaja2.Location = new System.Drawing.Point(374, 503);
-            this.cmdBaja2.Name = "cmdBaja2";
-            this.cmdBaja2.Size = new System.Drawing.Size(124, 36);
-            this.cmdBaja2.TabIndex = 12;
-            this.cmdBaja2.Text = "Baja";
-            this.cmdBaja2.UseVisualStyleBackColor = false;
-            // 
-            // cmdModificacion2
-            // 
-            this.cmdModificacion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.cmdModificacion2.Enabled = false;
-            this.cmdModificacion2.Location = new System.Drawing.Point(190, 503);
-            this.cmdModificacion2.Name = "cmdModificacion2";
-            this.cmdModificacion2.Size = new System.Drawing.Size(124, 36);
-            this.cmdModificacion2.TabIndex = 11;
-            this.cmdModificacion2.Text = "Modificación";
-            this.cmdModificacion2.UseVisualStyleBackColor = false;
-            // 
-            // cmdVolver2
-            // 
-            this.cmdVolver2.Location = new System.Drawing.Point(558, 503);
-            this.cmdVolver2.Name = "cmdVolver2";
-            this.cmdVolver2.Size = new System.Drawing.Size(124, 36);
-            this.cmdVolver2.TabIndex = 13;
-            this.cmdVolver2.Text = "Volver";
-            this.cmdVolver2.UseVisualStyleBackColor = true;
-            this.cmdVolver2.Click += new System.EventHandler(this.cmdVolver2_Click);
-            // 
-            // cmdAlta2
-            // 
-            this.cmdAlta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.cmdAlta2.Enabled = false;
-            this.cmdAlta2.Location = new System.Drawing.Point(6, 503);
-            this.cmdAlta2.Name = "cmdAlta2";
-            this.cmdAlta2.Size = new System.Drawing.Size(124, 36);
-            this.cmdAlta2.TabIndex = 10;
-            this.cmdAlta2.Text = "Alta";
-            this.cmdAlta2.UseVisualStyleBackColor = false;
-            this.cmdAlta2.Click += new System.EventHandler(this.cmdAlta2_Click);
-            // 
-            // cmdVerificar2
-            // 
-            this.cmdVerificar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVerificar2.Location = new System.Drawing.Point(499, 419);
-            this.cmdVerificar2.Name = "cmdVerificar2";
-            this.cmdVerificar2.Size = new System.Drawing.Size(146, 37);
-            this.cmdVerificar2.TabIndex = 8;
-            this.cmdVerificar2.Text = "Verificar";
-            this.cmdVerificar2.UseVisualStyleBackColor = true;
-            this.cmdVerificar2.Click += new System.EventHandler(this.cmdVerificar2_Click);
-            // 
-            // txtNumero2
-            // 
-            this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtNumero2.Location = new System.Drawing.Point(143, 301);
-            this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(54, 20);
-            this.txtNumero2.TabIndex = 1;
-            // 
-            // txtEntidad2
-            // 
-            this.txtEntidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtEntidad2.Location = new System.Drawing.Point(143, 341);
-            this.txtEntidad2.Name = "txtEntidad2";
-            this.txtEntidad2.Size = new System.Drawing.Size(147, 20);
-            this.txtEntidad2.TabIndex = 2;
-            // 
-            // txtApertura2
-            // 
-            this.txtApertura2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtApertura2.Location = new System.Drawing.Point(143, 381);
-            this.txtApertura2.Name = "txtApertura2";
-            this.txtApertura2.Size = new System.Drawing.Size(147, 20);
-            this.txtApertura2.TabIndex = 3;
-            // 
-            // txtNExpte2
-            // 
-            this.txtNExpte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtNExpte2.Location = new System.Drawing.Point(143, 421);
-            this.txtNExpte2.Name = "txtNExpte2";
-            this.txtNExpte2.Size = new System.Drawing.Size(147, 20);
-            this.txtNExpte2.TabIndex = 4;
-            // 
-            // txtJurisdiccion2
-            // 
-            this.txtJurisdiccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtJurisdiccion2.Location = new System.Drawing.Point(499, 301);
-            this.txtJurisdiccion2.Name = "txtJurisdiccion2";
-            this.txtJurisdiccion2.Size = new System.Drawing.Size(147, 20);
-            this.txtJurisdiccion2.TabIndex = 5;
-            // 
-            // txtDireccion2
-            // 
-            this.txtDireccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtDireccion2.Location = new System.Drawing.Point(499, 341);
-            this.txtDireccion2.Name = "txtDireccion2";
-            this.txtDireccion2.Size = new System.Drawing.Size(147, 20);
-            this.txtDireccion2.TabIndex = 6;
-            // 
-            // txtLiquiResp2
-            // 
-            this.txtLiquiResp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtLiquiResp2.Location = new System.Drawing.Point(499, 381);
-            this.txtLiquiResp2.Name = "txtLiquiResp2";
-            this.txtLiquiResp2.Size = new System.Drawing.Size(147, 20);
-            this.txtLiquiResp2.TabIndex = 7;
-            // 
-            // lblNumero2
-            // 
-            this.lblNumero2.AutoSize = true;
-            this.lblNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero2.Location = new System.Drawing.Point(52, 299);
-            this.lblNumero2.Name = "lblNumero2";
-            this.lblNumero2.Size = new System.Drawing.Size(65, 20);
-            this.lblNumero2.TabIndex = 47;
-            this.lblNumero2.Text = "Numero";
-            // 
-            // lblEntidad2
-            // 
-            this.lblEntidad2.AutoSize = true;
-            this.lblEntidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntidad2.Location = new System.Drawing.Point(52, 339);
-            this.lblEntidad2.Name = "lblEntidad2";
-            this.lblEntidad2.Size = new System.Drawing.Size(64, 20);
-            this.lblEntidad2.TabIndex = 48;
-            this.lblEntidad2.Text = "Entidad";
-            // 
-            // lblApertura2
-            // 
-            this.lblApertura2.AutoSize = true;
-            this.lblApertura2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApertura2.Location = new System.Drawing.Point(52, 379);
-            this.lblApertura2.Name = "lblApertura2";
-            this.lblApertura2.Size = new System.Drawing.Size(71, 20);
-            this.lblApertura2.TabIndex = 49;
-            this.lblApertura2.Text = "Apertura";
-            // 
-            // lblNExpte2
-            // 
-            this.lblNExpte2.AutoSize = true;
-            this.lblNExpte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNExpte2.Location = new System.Drawing.Point(52, 419);
-            this.lblNExpte2.Name = "lblNExpte2";
-            this.lblNExpte2.Size = new System.Drawing.Size(70, 20);
-            this.lblNExpte2.TabIndex = 50;
-            this.lblNExpte2.Text = "N° Expte";
-            // 
-            // lblJurisdiccion2
-            // 
-            this.lblJurisdiccion2.AutoSize = true;
-            this.lblJurisdiccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJurisdiccion2.Location = new System.Drawing.Point(313, 299);
-            this.lblJurisdiccion2.Name = "lblJurisdiccion2";
-            this.lblJurisdiccion2.Size = new System.Drawing.Size(91, 20);
-            this.lblJurisdiccion2.TabIndex = 51;
-            this.lblJurisdiccion2.Text = "Jurisdiccion";
-            // 
-            // lblDireccion2
-            // 
-            this.lblDireccion2.AutoSize = true;
-            this.lblDireccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion2.Location = new System.Drawing.Point(313, 339);
-            this.lblDireccion2.Name = "lblDireccion2";
-            this.lblDireccion2.Size = new System.Drawing.Size(75, 20);
-            this.lblDireccion2.TabIndex = 52;
-            this.lblDireccion2.Text = "Direccion";
-            // 
-            // lblLiquiResp2
-            // 
-            this.lblLiquiResp2.AutoSize = true;
-            this.lblLiquiResp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiquiResp2.Location = new System.Drawing.Point(313, 379);
-            this.lblLiquiResp2.Name = "lblLiquiResp2";
-            this.lblLiquiResp2.Size = new System.Drawing.Size(174, 20);
-            this.lblLiquiResp2.TabIndex = 53;
-            this.lblLiquiResp2.Text = "Liquidador responsable";
-            // 
-            // cmdLimpiar2
-            // 
-            this.cmdLimpiar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar2.Location = new System.Drawing.Point(341, 419);
-            this.cmdLimpiar2.Name = "cmdLimpiar2";
-            this.cmdLimpiar2.Size = new System.Drawing.Size(146, 37);
-            this.cmdLimpiar2.TabIndex = 54;
-            this.cmdLimpiar2.Text = "Limpiar";
-            this.cmdLimpiar2.UseVisualStyleBackColor = true;
-            this.cmdLimpiar2.Click += new System.EventHandler(this.cmdLimpiar2_Click);
             // 
             // tabPage2
             // 
@@ -634,6 +443,154 @@
             this.tabPage2.Text = "Aseguradores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cmdLimpiar2
+            // 
+            this.cmdLimpiar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLimpiar2.Location = new System.Drawing.Point(341, 419);
+            this.cmdLimpiar2.Name = "cmdLimpiar2";
+            this.cmdLimpiar2.Size = new System.Drawing.Size(146, 37);
+            this.cmdLimpiar2.TabIndex = 54;
+            this.cmdLimpiar2.Text = "Limpiar";
+            this.cmdLimpiar2.UseVisualStyleBackColor = true;
+            this.cmdLimpiar2.Click += new System.EventHandler(this.cmdLimpiar2_Click);
+            // 
+            // lblLiquiResp2
+            // 
+            this.lblLiquiResp2.AutoSize = true;
+            this.lblLiquiResp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiquiResp2.Location = new System.Drawing.Point(313, 379);
+            this.lblLiquiResp2.Name = "lblLiquiResp2";
+            this.lblLiquiResp2.Size = new System.Drawing.Size(174, 20);
+            this.lblLiquiResp2.TabIndex = 53;
+            this.lblLiquiResp2.Text = "Liquidador responsable";
+            // 
+            // lblDireccion2
+            // 
+            this.lblDireccion2.AutoSize = true;
+            this.lblDireccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion2.Location = new System.Drawing.Point(313, 339);
+            this.lblDireccion2.Name = "lblDireccion2";
+            this.lblDireccion2.Size = new System.Drawing.Size(75, 20);
+            this.lblDireccion2.TabIndex = 52;
+            this.lblDireccion2.Text = "Direccion";
+            // 
+            // lblJurisdiccion2
+            // 
+            this.lblJurisdiccion2.AutoSize = true;
+            this.lblJurisdiccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJurisdiccion2.Location = new System.Drawing.Point(313, 299);
+            this.lblJurisdiccion2.Name = "lblJurisdiccion2";
+            this.lblJurisdiccion2.Size = new System.Drawing.Size(91, 20);
+            this.lblJurisdiccion2.TabIndex = 51;
+            this.lblJurisdiccion2.Text = "Jurisdiccion";
+            // 
+            // lblNExpte2
+            // 
+            this.lblNExpte2.AutoSize = true;
+            this.lblNExpte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNExpte2.Location = new System.Drawing.Point(52, 419);
+            this.lblNExpte2.Name = "lblNExpte2";
+            this.lblNExpte2.Size = new System.Drawing.Size(70, 20);
+            this.lblNExpte2.TabIndex = 50;
+            this.lblNExpte2.Text = "N° Expte";
+            // 
+            // lblApertura2
+            // 
+            this.lblApertura2.AutoSize = true;
+            this.lblApertura2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApertura2.Location = new System.Drawing.Point(52, 379);
+            this.lblApertura2.Name = "lblApertura2";
+            this.lblApertura2.Size = new System.Drawing.Size(71, 20);
+            this.lblApertura2.TabIndex = 49;
+            this.lblApertura2.Text = "Apertura";
+            // 
+            // lblEntidad2
+            // 
+            this.lblEntidad2.AutoSize = true;
+            this.lblEntidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntidad2.Location = new System.Drawing.Point(52, 339);
+            this.lblEntidad2.Name = "lblEntidad2";
+            this.lblEntidad2.Size = new System.Drawing.Size(64, 20);
+            this.lblEntidad2.TabIndex = 48;
+            this.lblEntidad2.Text = "Entidad";
+            // 
+            // lblNumero2
+            // 
+            this.lblNumero2.AutoSize = true;
+            this.lblNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero2.Location = new System.Drawing.Point(52, 299);
+            this.lblNumero2.Name = "lblNumero2";
+            this.lblNumero2.Size = new System.Drawing.Size(65, 20);
+            this.lblNumero2.TabIndex = 47;
+            this.lblNumero2.Text = "Numero";
+            // 
+            // txtLiquiResp2
+            // 
+            this.txtLiquiResp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtLiquiResp2.Location = new System.Drawing.Point(499, 381);
+            this.txtLiquiResp2.Name = "txtLiquiResp2";
+            this.txtLiquiResp2.Size = new System.Drawing.Size(147, 20);
+            this.txtLiquiResp2.TabIndex = 7;
+            // 
+            // txtDireccion2
+            // 
+            this.txtDireccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtDireccion2.Location = new System.Drawing.Point(499, 341);
+            this.txtDireccion2.Name = "txtDireccion2";
+            this.txtDireccion2.Size = new System.Drawing.Size(147, 20);
+            this.txtDireccion2.TabIndex = 6;
+            // 
+            // txtJurisdiccion2
+            // 
+            this.txtJurisdiccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtJurisdiccion2.Location = new System.Drawing.Point(499, 301);
+            this.txtJurisdiccion2.Name = "txtJurisdiccion2";
+            this.txtJurisdiccion2.Size = new System.Drawing.Size(147, 20);
+            this.txtJurisdiccion2.TabIndex = 5;
+            // 
+            // txtNExpte2
+            // 
+            this.txtNExpte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtNExpte2.Location = new System.Drawing.Point(143, 421);
+            this.txtNExpte2.Name = "txtNExpte2";
+            this.txtNExpte2.Size = new System.Drawing.Size(147, 20);
+            this.txtNExpte2.TabIndex = 4;
+            // 
+            // txtApertura2
+            // 
+            this.txtApertura2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtApertura2.Location = new System.Drawing.Point(143, 381);
+            this.txtApertura2.Name = "txtApertura2";
+            this.txtApertura2.Size = new System.Drawing.Size(147, 20);
+            this.txtApertura2.TabIndex = 3;
+            // 
+            // txtEntidad2
+            // 
+            this.txtEntidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtEntidad2.Location = new System.Drawing.Point(143, 341);
+            this.txtEntidad2.Name = "txtEntidad2";
+            this.txtEntidad2.Size = new System.Drawing.Size(147, 20);
+            this.txtEntidad2.TabIndex = 2;
+            // 
+            // txtNumero2
+            // 
+            this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtNumero2.Location = new System.Drawing.Point(143, 301);
+            this.txtNumero2.Name = "txtNumero2";
+            this.txtNumero2.Size = new System.Drawing.Size(54, 20);
+            this.txtNumero2.TabIndex = 1;
+            // 
+            // cmdVerificar2
+            // 
+            this.cmdVerificar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdVerificar2.Location = new System.Drawing.Point(499, 419);
+            this.cmdVerificar2.Name = "cmdVerificar2";
+            this.cmdVerificar2.Size = new System.Drawing.Size(146, 37);
+            this.cmdVerificar2.TabIndex = 8;
+            this.cmdVerificar2.Text = "Verificar";
+            this.cmdVerificar2.UseVisualStyleBackColor = true;
+            this.cmdVerificar2.Click += new System.EventHandler(this.cmdVerificar2_Click);
+            // 
             // dgvAseguradores
             // 
             this.dgvAseguradores.Location = new System.Drawing.Point(6, 6);
@@ -642,6 +599,50 @@
             this.dgvAseguradores.Size = new System.Drawing.Size(678, 250);
             this.dgvAseguradores.TabIndex = 0;
             this.dgvAseguradores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAseguradores_CellContentDoubleClick);
+            // 
+            // cmdAlta2
+            // 
+            this.cmdAlta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cmdAlta2.Enabled = false;
+            this.cmdAlta2.Location = new System.Drawing.Point(6, 503);
+            this.cmdAlta2.Name = "cmdAlta2";
+            this.cmdAlta2.Size = new System.Drawing.Size(124, 36);
+            this.cmdAlta2.TabIndex = 10;
+            this.cmdAlta2.Text = "Alta";
+            this.cmdAlta2.UseVisualStyleBackColor = false;
+            this.cmdAlta2.Click += new System.EventHandler(this.cmdAlta2_Click);
+            // 
+            // cmdVolver2
+            // 
+            this.cmdVolver2.Location = new System.Drawing.Point(558, 503);
+            this.cmdVolver2.Name = "cmdVolver2";
+            this.cmdVolver2.Size = new System.Drawing.Size(124, 36);
+            this.cmdVolver2.TabIndex = 13;
+            this.cmdVolver2.Text = "Volver";
+            this.cmdVolver2.UseVisualStyleBackColor = true;
+            this.cmdVolver2.Click += new System.EventHandler(this.cmdVolver2_Click);
+            // 
+            // cmdModificacion2
+            // 
+            this.cmdModificacion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cmdModificacion2.Enabled = false;
+            this.cmdModificacion2.Location = new System.Drawing.Point(190, 503);
+            this.cmdModificacion2.Name = "cmdModificacion2";
+            this.cmdModificacion2.Size = new System.Drawing.Size(124, 36);
+            this.cmdModificacion2.TabIndex = 11;
+            this.cmdModificacion2.Text = "Modificación";
+            this.cmdModificacion2.UseVisualStyleBackColor = false;
+            // 
+            // cmdBaja2
+            // 
+            this.cmdBaja2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cmdBaja2.Enabled = false;
+            this.cmdBaja2.Location = new System.Drawing.Point(374, 503);
+            this.cmdBaja2.Name = "cmdBaja2";
+            this.cmdBaja2.Size = new System.Drawing.Size(124, 36);
+            this.cmdBaja2.TabIndex = 12;
+            this.cmdBaja2.Text = "Baja";
+            this.cmdBaja2.UseVisualStyleBackColor = false;
             // 
             // frmCargaABM
             // 
