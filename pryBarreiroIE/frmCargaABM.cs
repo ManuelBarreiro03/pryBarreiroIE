@@ -21,20 +21,6 @@ namespace pryBarreiroIE
             InitializeComponent();
         }
 
-        private void cmdVolver1_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
-        }
-
-        private void cmdVolver2_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
-        }
-
         private void frmCargaABM_Load(object sender, EventArgs e)
         {
             dgvAseguradores.Rows.Clear();
@@ -69,6 +55,20 @@ namespace pryBarreiroIE
                 dgvProveedores.Rows.Add(separarDatos);
             }
             srProveedor.Close();
+        }
+
+        private void cmdVolver1_Click(object sender, EventArgs e)
+        {
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
+        }
+
+        private void cmdVolver2_Click(object sender, EventArgs e)
+        {
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
         }
 
         private void cmdVerificar2_Click(object sender, EventArgs e)
@@ -204,9 +204,82 @@ namespace pryBarreiroIE
             }
         }
 
+        private void dgvAseguradores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNumero2.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
+            txtNumero2.Enabled = false;
+            txtEntidad2.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
+            txtApertura2.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
+            txtNExpte2.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
+            txtJurisdiccion2.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion2.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
+            txtLiquiResp2.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void dgvProveedores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNumero1.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
+            txtNumero1.Enabled = false;
+            txtEntidad1.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
+            txtApertura1.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
+            txtNExpte1.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
+            txtJurisdiccion1.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion1.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
+            txtLiquiResp1.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void cmdLimpiar1_Click(object sender, EventArgs e)
+        {
+            txtNumero1.Text = "";
+            txtNumero1.Enabled = true;
+            txtEntidad1.Text = "";
+            txtApertura1.Text = "";
+            txtNExpte1.Text = "";
+            txtJurisdiccion1.Text = "";
+            txtDireccion1.Text = "";
+            txtLiquiResp1.Text = "";
+            cmdAlta1.Enabled = false;
+            cmdBaja1.Enabled = false;
+            cmdModificacion1.Enabled = false;
+        }
+
+        private void cmdLimpiar2_Click(object sender, EventArgs e)
+        {
+            txtNumero2.Text = "";
+            txtNumero2.Enabled = true;
+            txtEntidad2.Text = "";
+            txtApertura2.Text = "";
+            txtNExpte2.Text = "";
+            txtJurisdiccion2.Text = "";
+            txtDireccion2.Text = "";
+            txtLiquiResp2.Text = "";
+            cmdAlta2.Enabled = false;
+            cmdBaja2.Enabled = false;
+            cmdModificacion2.Enabled = false;
+        }
+
         private void cmdAlta2_Click(object sender, EventArgs e)
         {
             StreamWriter srAlta = new StreamWriter(@"../../" + "resources/Listado de aseguradores.csv");
+            srAlta.WriteLine(txtNumero2.Text + ";" + txtEntidad2.Text + ";" + txtApertura2.Text + ";" + txtNExpte2.Text + ";" + txtJurisdiccion2.Text + ";" + txtDireccion2.Text + ";" + txtLiquiResp2.Text);
+            srAlta.Close();
+            dgvAseguradores.Rows.Clear();
+            dgvAseguradores.Columns.Clear();
+            StreamReader srAseguradores = new StreamReader(@"../../" + "resources/Listado de aseguradores.csv");
+            leerLinea = srAseguradores.ReadLine();
+            separarDatos = leerLinea.Split(';');
+            for (int i = 0; i < separarDatos.Length; i++)
+            {
+                dgvAseguradores.Columns.Add(separarDatos[i], separarDatos[i]);
+            }
+            while (srAseguradores.EndOfStream == false)
+            {
+                leerLinea = srAseguradores.ReadLine();
+                separarDatos = leerLinea.Split(';');
+                dgvAseguradores.Rows.Add(separarDatos);
+            }
+            srAseguradores.Close();
         }
+
     }
 }
