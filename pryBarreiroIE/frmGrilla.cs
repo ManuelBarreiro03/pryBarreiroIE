@@ -23,10 +23,9 @@ namespace pryBarreiroIE
 
         private void frmGrilla_Load(object sender, EventArgs e)
         {
-            
             dgvMuestraGrilla.Rows.Clear();
             dgvMuestraGrilla.Columns.Clear();
-            StreamReader srAseguradores = new StreamReader(@"../../../" + );
+            StreamReader srAseguradores = new StreamReader(@"../../" + frmMuestraArchivos.RutaDelArchivo);
             leerLinea = srAseguradores.ReadLine();
             separarDatos = leerLinea.Split(';');
             for (int i = 0; i < separarDatos.Length; i++)

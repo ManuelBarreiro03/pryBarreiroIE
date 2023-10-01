@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryBarreiroIE
 {
     public partial class frmMuestraArchivos : Form
     {
-        public string RutaDelArchivo;
+        static public string RutaDelArchivo;
         public frmMuestraArchivos()
         {
             InitializeComponent();
@@ -90,9 +91,10 @@ namespace pryBarreiroIE
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
-            RutaDelArchivo = treeView1.SelectedNode.Text +"\\"+ listView1.ToString();
-            frmGrilla frmGrilla = new frmGrilla();
-            frmGrilla.ShowDialog();
+            RutaDelArchivo = treeView1.SelectedNode.Text + "\\" + listView1.SelectedItems.ToString();
+            MessageBox.Show(RutaDelArchivo);
+            //frmGrilla frmGrilla = new frmGrilla();
+            //frmGrilla.ShowDialog();
         }
     }
 }
