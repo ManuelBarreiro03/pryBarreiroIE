@@ -260,7 +260,7 @@ namespace pryBarreiroIE
 
         private void cmdAlta2_Click(object sender, EventArgs e)
         {
-            StreamWriter srAlta = new StreamWriter(@"../../" + "resources/Listado de aseguradores.csv");
+            StreamWriter srAlta = new StreamWriter(@"../../" + "resources/Listado de aseguradores.csv", true);
             srAlta.WriteLine(txtNumero2.Text + ";" + txtEntidad2.Text + ";" + txtApertura2.Text + ";" + txtNExpte2.Text + ";" + txtJurisdiccion2.Text + ";" + txtDireccion2.Text + ";" + txtLiquiResp2.Text);
             srAlta.Close();
             MessageBox.Show("Venta cargada");
