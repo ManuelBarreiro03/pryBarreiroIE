@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace pryBarreiroIE
 {
     public partial class frmMuestraArchivos : Form
     {
+        public string RutaDelArchivo;
         public frmMuestraArchivos()
         {
             InitializeComponent();
@@ -88,7 +90,8 @@ namespace pryBarreiroIE
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
-            this.Close();
+            RutaDelArchivo = treeView1.SelectedNode.Text +"\\"+ listView1.ToString();
+            MessageBox.Show(RutaDelArchivo);
         }
     }
 }
