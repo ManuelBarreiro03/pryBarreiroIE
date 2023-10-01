@@ -57,20 +57,6 @@ namespace pryBarreiroIE
             srProveedor.Close();
         }
 
-        private void cmdVolver1_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
-        }
-
-        private void cmdVolver2_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
-        }
-
         private void cmdVerificar2_Click(object sender, EventArgs e)
         {
             if (txtNumero2.Text == "")
@@ -204,28 +190,18 @@ namespace pryBarreiroIE
             }
         }
 
-        private void dgvAseguradores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void cmdVolver1_Click(object sender, EventArgs e)
         {
-            txtNumero2.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
-            txtNumero2.Enabled = false;
-            txtEntidad2.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
-            txtApertura2.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
-            txtNExpte2.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
-            txtJurisdiccion2.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
-            txtDireccion2.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
-            txtLiquiResp2.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
         }
 
-        private void dgvProveedores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void cmdVolver2_Click(object sender, EventArgs e)
         {
-            txtNumero1.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
-            txtNumero1.Enabled = false;
-            txtEntidad1.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
-            txtApertura1.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
-            txtNExpte1.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
-            txtJurisdiccion1.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
-            txtDireccion1.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
-            txtLiquiResp1.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
         }
 
         private void cmdLimpiar1_Click(object sender, EventArgs e)
@@ -256,6 +232,30 @@ namespace pryBarreiroIE
             cmdAlta2.Enabled = false;
             cmdBaja2.Enabled = false;
             cmdModificacion2.Enabled = false;
+        }
+
+        private void dgvAseguradores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNumero2.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
+            txtNumero2.Enabled = false;
+            txtEntidad2.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
+            txtApertura2.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
+            txtNExpte2.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
+            txtJurisdiccion2.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion2.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
+            txtLiquiResp2.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void dgvProveedores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNumero1.Text = dgvAseguradores.CurrentRow.Cells[0].Value.ToString();
+            txtNumero1.Enabled = false;
+            txtEntidad1.Text = dgvAseguradores.CurrentRow.Cells[1].Value.ToString();
+            txtApertura1.Text = dgvAseguradores.CurrentRow.Cells[2].Value.ToString();
+            txtNExpte1.Text = dgvAseguradores.CurrentRow.Cells[3].Value.ToString();
+            txtJurisdiccion1.Text = dgvAseguradores.CurrentRow.Cells[4].Value.ToString();
+            txtDireccion1.Text = dgvAseguradores.CurrentRow.Cells[5].Value.ToString();
+            txtLiquiResp1.Text = dgvAseguradores.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void cmdAlta2_Click(object sender, EventArgs e)
