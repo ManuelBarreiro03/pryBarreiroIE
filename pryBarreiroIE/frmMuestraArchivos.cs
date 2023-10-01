@@ -91,7 +91,8 @@ namespace pryBarreiroIE
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             RutaDelArchivo = treeView1.SelectedNode.Text +"\\"+ listView1.ToString();
-            MessageBox.Show(RutaDelArchivo);
+            frmGrilla frmGrilla = new frmGrilla();
+            frmGrilla.ShowDialog();
         }
     }
 }
