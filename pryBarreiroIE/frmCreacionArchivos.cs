@@ -66,12 +66,6 @@ namespace pryBarreiroIE
             txtRegistrar.Text = "";
             txtRegistrar.Focus();
         }
-        private void cmdVolver_Click(object sender, EventArgs e)
-        {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
-        }
 
         private void cmdCargarAseguradores_Click(object sender, EventArgs e)
         {
@@ -91,6 +85,12 @@ namespace pryBarreiroIE
                 dgvGrilla.Rows.Add(separarDatos);
             }
             srProveedor.Close();
+        }
+        private void cmdVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanas frmVentanas = new frmVentanas();
+            this.Hide();
+            frmVentanas.ShowDialog();
         }
     }
 }

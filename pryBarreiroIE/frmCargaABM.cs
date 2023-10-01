@@ -263,6 +263,7 @@ namespace pryBarreiroIE
             StreamWriter srAlta = new StreamWriter(@"../../" + "resources/Listado de aseguradores.csv");
             srAlta.WriteLine(txtNumero2.Text + ";" + txtEntidad2.Text + ";" + txtApertura2.Text + ";" + txtNExpte2.Text + ";" + txtJurisdiccion2.Text + ";" + txtDireccion2.Text + ";" + txtLiquiResp2.Text);
             srAlta.Close();
+            MessageBox.Show("Venta cargada");
             dgvAseguradores.Rows.Clear();
             dgvAseguradores.Columns.Clear();
             StreamReader srAseguradores = new StreamReader(@"../../" + "resources/Listado de aseguradores.csv");
