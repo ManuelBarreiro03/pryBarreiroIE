@@ -32,7 +32,8 @@
             this.cmdSeguros = new System.Windows.Forms.Button();
             this.cmdUbicacionCarpeta = new System.Windows.Forms.Button();
             this.VentanaCarpetas = new System.Windows.Forms.FolderBrowserDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmdCargaABM = new System.Windows.Forms.Button();
+            this.cmdLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdSeguros
@@ -55,22 +56,33 @@
             this.cmdUbicacionCarpeta.UseVisualStyleBackColor = true;
             this.cmdUbicacionCarpeta.Click += new System.EventHandler(this.cmdUbicacionCarpeta_Click);
             // 
-            // button1
+            // cmdCargaABM
             // 
-            this.button1.Location = new System.Drawing.Point(13, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 61);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Carga ABM ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cmdCargaABM.Location = new System.Drawing.Point(13, 174);
+            this.cmdCargaABM.Name = "cmdCargaABM";
+            this.cmdCargaABM.Size = new System.Drawing.Size(179, 61);
+            this.cmdCargaABM.TabIndex = 2;
+            this.cmdCargaABM.Text = "Carga ABM ";
+            this.cmdCargaABM.UseVisualStyleBackColor = true;
+            this.cmdCargaABM.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cmdLogin
+            // 
+            this.cmdLogin.Location = new System.Drawing.Point(13, 257);
+            this.cmdLogin.Name = "cmdLogin";
+            this.cmdLogin.Size = new System.Drawing.Size(179, 61);
+            this.cmdLogin.TabIndex = 3;
+            this.cmdLogin.Text = "Login";
+            this.cmdLogin.UseVisualStyleBackColor = true;
+            this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
             // frmVentanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 251);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(209, 340);
+            this.Controls.Add(this.cmdLogin);
+            this.Controls.Add(this.cmdCargaABM);
             this.Controls.Add(this.cmdUbicacionCarpeta);
             this.Controls.Add(this.cmdSeguros);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -88,6 +100,7 @@
         private System.Windows.Forms.Button cmdSeguros;
         private System.Windows.Forms.Button cmdUbicacionCarpeta;
         private System.Windows.Forms.FolderBrowserDialog VentanaCarpetas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdCargaABM;
+        private System.Windows.Forms.Button cmdLogin;
     }
 }

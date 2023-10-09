@@ -38,5 +38,12 @@ namespace pryBarreiroIE
             this.Hide();
             frmCargaVentas.ShowDialog();
         }
+
+        private void cmdLogin_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            this.Hide();
+            frmLogin.ShowDialog();
+        }
     }
 }

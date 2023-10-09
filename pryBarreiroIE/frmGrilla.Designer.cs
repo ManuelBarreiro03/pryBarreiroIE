@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvMuestraGrilla);
             this.Name = "frmGrilla";
-            this.Text = "frmGrilla";
+            this.Text = "Grilla";
             this.Load += new System.EventHandler(this.frmGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuestraGrilla)).EndInit();
             this.ResumeLayout(false);
