@@ -446,7 +446,7 @@
             // cmdLimpiar2
             // 
             this.cmdLimpiar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar2.Location = new System.Drawing.Point(341, 419);
+            this.cmdLimpiar2.Location = new System.Drawing.Point(341, 412);
             this.cmdLimpiar2.Name = "cmdLimpiar2";
             this.cmdLimpiar2.Size = new System.Drawing.Size(146, 37);
             this.cmdLimpiar2.TabIndex = 54;
@@ -583,7 +583,7 @@
             // cmdVerificar2
             // 
             this.cmdVerificar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdVerificar2.Location = new System.Drawing.Point(499, 419);
+            this.cmdVerificar2.Location = new System.Drawing.Point(499, 412);
             this.cmdVerificar2.Name = "cmdVerificar2";
             this.cmdVerificar2.Size = new System.Drawing.Size(146, 37);
             this.cmdVerificar2.TabIndex = 8;
