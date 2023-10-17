@@ -319,5 +319,13 @@ namespace pryBarreiroIE
             cmdBaja1.Enabled = false;
             cmdModificacion1.Enabled = false;
         }
+
+        private void frmCargaABM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if () 
+            {
+            
+            }
+        }
     }
 }

@@ -657,6 +657,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga ABM";
             this.Load += new System.EventHandler(this.frmCargaABM_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmCargaABM_KeyPress);
             this.tbpProveedores.ResumeLayout(false);
             this.tbpProveedores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();

@@ -16,6 +16,7 @@ namespace pryBarreiroIE
     {
         public static void AbrirBD()
         {
+            //F9 y F10 para depurar y revisar
            OleDbConnection conexionBD = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source =" + @"../../" + "Resources/Base De Datos.accdb");
             conexionBD.Open();
             OleDbCommand objetocmd = new OleDbCommand();
