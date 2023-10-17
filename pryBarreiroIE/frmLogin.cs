@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
+using System.Data.OleDb;
 
 namespace pryBarreiroIE.Resources
 {
