@@ -51,8 +51,10 @@ namespace pryBarreiroIE
             {
                 while (lectorBD.Read())
                 {
-                    datosTabla += "-" + lectorBD[1];
+                    datosTabla += " - " + lectorBD[1];
+                    
                 }
+                datosTabla += " - ";
             }
         }
         public void BuscarPorCodigo(int codigoSocio)
@@ -76,11 +78,12 @@ namespace pryBarreiroIE
                         break;
                     }
                 }
-                if (true)
+                if (seEncuentra == false)
                 {
-
+                    MessageBox.Show("no existe", "consulta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
+            lectorBD.Close();
         }
     }
 }

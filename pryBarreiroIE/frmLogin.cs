@@ -22,7 +22,7 @@ namespace pryBarreiroIE.Resources
 
         private void button1_Click(object sender, EventArgs e)
         {
-            objBaseDatos.ConectarBD();
+            objBaseDatos.BuscarPorCodigo(int.Parse(txtCodigoUsuario.Text));
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

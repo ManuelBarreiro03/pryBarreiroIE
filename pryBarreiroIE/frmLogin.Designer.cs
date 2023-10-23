@@ -34,6 +34,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblEstadoConexion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txtCodigoUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +43,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(49, 186);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 60);
+            this.button1.Size = new System.Drawing.Size(96, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,11 +93,19 @@
             this.lblEstadoConexion.Size = new System.Drawing.Size(110, 17);
             this.lblEstadoConexion.Text = "Estado de conexion";
             // 
+            // txtCodigoUsuario
+            // 
+            this.txtCodigoUsuario.Location = new System.Drawing.Point(49, 228);
+            this.txtCodigoUsuario.Name = "txtCodigoUsuario";
+            this.txtCodigoUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoUsuario.TabIndex = 5;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 374);
+            this.Controls.Add(this.txtCodigoUsuario);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -121,5 +130,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblEstadoConexion;
+        private System.Windows.Forms.TextBox txtCodigoUsuario;
     }
 }
