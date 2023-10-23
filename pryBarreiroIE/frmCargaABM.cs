@@ -322,10 +322,7 @@ namespace pryBarreiroIE
 
         private void frmCargaABM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if () 
-            {
-            
-            }
+
         }
     }
 }

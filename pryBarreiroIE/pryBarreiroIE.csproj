@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsLogin.cs" />
+    <Compile Include="clsLogs.cs" />
     <Compile Include="frmCargaABM.cs">
       <SubType>Form</SubType>
     </Compile>

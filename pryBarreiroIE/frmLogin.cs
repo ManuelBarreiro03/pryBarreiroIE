@@ -14,6 +14,7 @@ namespace pryBarreiroIE.Resources
 {
     public partial class frmLogin : Form
     {
+        clsLogin objBaseDatos;
         public frmLogin()
         {
             InitializeComponent();
@@ -21,7 +22,16 @@ namespace pryBarreiroIE.Resources
 
         private void button1_Click(object sender, EventArgs e)
         {
-            clsLogin.AbrirBD();
+            objBaseDatos.ConectarBD();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            objBaseDatos = new clsLogin();
+            objBaseDatos.ConectarBD();
+            lblEstadoConexion.Text = objBaseDatos.estadoConexion;
+            objBaseDatos.TraerDatos();
+            lblDatos.Text = objBaseDatos.datosTabla;
         }
     }
 }
