@@ -19,7 +19,7 @@ namespace pryBarreiroIE
         OleDbDataReader lectorBD;
 
         string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;" +
-            "Data Source=" + @"../../Resources/EL_CLUB.accdb";
+        "Data Source=" + @"../../Resources/EL_CLUB.accdb";
         public string estadoConexion = "";
         public string datosTabla;
 
@@ -38,12 +38,20 @@ namespace pryBarreiroIE
             }
         }
 
-        public void TraerDatos()
+        public void TraerDatos(DataGridView grilla)
         {
             comandoBD = new OleDbCommand();
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             comandoBD.CommandText = "SOCIOS";
+            grilla.Columns.Add("Id", "Id");
+            grilla.Columns.Add("Nombre", "Nombre");
+            grilla.Columns.Add("Apellido", "Apellido");
+            grilla.Columns.Add("Lugar", "Lugar");
+            grilla.Columns.Add("Edad", "Edad");
+            grilla.Columns.Add("Sexo", "Sexo");
+            grilla.Columns.Add("Ingreso", "Ingreso");
+            grilla.Columns.Add("Puntaje", "Puntaje");
 
             lectorBD = comandoBD.ExecuteReader();
 
@@ -51,14 +59,14 @@ namespace pryBarreiroIE
             {
                 while (lectorBD.Read())
                 {
-                    datosTabla += " - " + lectorBD[1];
-                    
+                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], 
+                    lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
                 }
-                datosTabla += " - ";
             }
         }
-        public void BuscarPorCodigo(int codigoSocio)
+        public void BuscarPorCodigo(int codigoSocio, DataGridView grilla)
         {
+            ConectarBD();
             comandoBD = new OleDbCommand();
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
@@ -73,9 +81,10 @@ namespace pryBarreiroIE
                 {
                     if (int.Parse(lectorBD[0].ToString()) == codigoSocio)
                     {
-                        MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        grilla.Rows.Clear();
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
+                        lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
                         seEncuentra = true;
-                        break;
                     }
                 }
                 if (seEncuentra == false)
@@ -84,6 +93,10 @@ namespace pryBarreiroIE
                 }
             }
             lectorBD.Close();
+        }
+        public void Registros() 
+        {
+            
         }
     }
 }

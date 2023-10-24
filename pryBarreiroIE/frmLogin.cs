@@ -18,20 +18,20 @@ namespace pryBarreiroIE.Resources
         public frmLogin()
         {
             InitializeComponent();
+            objBaseDatos = new clsLogin();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            objBaseDatos.BuscarPorCodigo(int.Parse(txtCodigoUsuario.Text));
+            objBaseDatos.BuscarPorCodigo(int.Parse(txtCodigoUsuario.Text), dgvGrilla);
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            objBaseDatos = new clsLogin();
+            clsLogin objBaseDatos = new clsLogin();
             objBaseDatos.ConectarBD();
             lblEstadoConexion.Text = objBaseDatos.estadoConexion;
-            objBaseDatos.TraerDatos();
-            lblDatos.Text = objBaseDatos.datosTabla;
+            objBaseDatos.TraerDatos(dgvGrilla);
         }
     }
 }
