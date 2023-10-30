@@ -34,6 +34,8 @@
             this.VentanaCarpetas = new System.Windows.Forms.FolderBrowserDialog();
             this.cmdCargaABM = new System.Windows.Forms.Button();
             this.cmdLogin = new System.Windows.Forms.Button();
+            this.cmdRegistros = new System.Windows.Forms.Button();
+            this.cmdInicioSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdSeguros
@@ -48,7 +50,7 @@
             // 
             // cmdUbicacionCarpeta
             // 
-            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 93);
+            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 90);
             this.cmdUbicacionCarpeta.Name = "cmdUbicacionCarpeta";
             this.cmdUbicacionCarpeta.Size = new System.Drawing.Size(179, 61);
             this.cmdUbicacionCarpeta.TabIndex = 1;
@@ -58,7 +60,7 @@
             // 
             // cmdCargaABM
             // 
-            this.cmdCargaABM.Location = new System.Drawing.Point(13, 174);
+            this.cmdCargaABM.Location = new System.Drawing.Point(197, 12);
             this.cmdCargaABM.Name = "cmdCargaABM";
             this.cmdCargaABM.Size = new System.Drawing.Size(179, 61);
             this.cmdCargaABM.TabIndex = 2;
@@ -68,19 +70,41 @@
             // 
             // cmdLogin
             // 
-            this.cmdLogin.Location = new System.Drawing.Point(13, 257);
-            this.cmdLogin.Name = "cmdLogin";
+            this.cmdLogin.Location = new System.Drawing.Point(197, 90);
+            this.cmdLogin.Name = "cmdBaseDatos";
             this.cmdLogin.Size = new System.Drawing.Size(179, 61);
             this.cmdLogin.TabIndex = 3;
-            this.cmdLogin.Text = "Login";
+            this.cmdLogin.Text = "Base de Datos";
             this.cmdLogin.UseVisualStyleBackColor = true;
-            this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
+            this.cmdLogin.Click += new System.EventHandler(this.cmdBaseDatos_Click);
+            // 
+            // cmdRegistros
+            // 
+            this.cmdRegistros.Location = new System.Drawing.Point(12, 168);
+            this.cmdRegistros.Name = "cmdRegistros";
+            this.cmdRegistros.Size = new System.Drawing.Size(179, 61);
+            this.cmdRegistros.TabIndex = 4;
+            this.cmdRegistros.Text = "Registros/Logs";
+            this.cmdRegistros.UseVisualStyleBackColor = true;
+            this.cmdRegistros.Click += new System.EventHandler(this.cmdRegistros_Click);
+            // 
+            // cmdInicioSesion
+            // 
+            this.cmdInicioSesion.Location = new System.Drawing.Point(197, 168);
+            this.cmdInicioSesion.Name = "cmdInicioSesion";
+            this.cmdInicioSesion.Size = new System.Drawing.Size(179, 61);
+            this.cmdInicioSesion.TabIndex = 5;
+            this.cmdInicioSesion.Text = "Inicio de sesion";
+            this.cmdInicioSesion.UseVisualStyleBackColor = true;
+            this.cmdInicioSesion.Click += new System.EventHandler(this.cmdInicioSesion_Click);
             // 
             // frmVentanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 340);
+            this.ClientSize = new System.Drawing.Size(392, 247);
+            this.Controls.Add(this.cmdInicioSesion);
+            this.Controls.Add(this.cmdRegistros);
             this.Controls.Add(this.cmdLogin);
             this.Controls.Add(this.cmdCargaABM);
             this.Controls.Add(this.cmdUbicacionCarpeta);
@@ -102,5 +126,7 @@
         private System.Windows.Forms.FolderBrowserDialog VentanaCarpetas;
         private System.Windows.Forms.Button cmdCargaABM;
         private System.Windows.Forms.Button cmdLogin;
+        private System.Windows.Forms.Button cmdRegistros;
+        private System.Windows.Forms.Button cmdInicioSesion;
     }
 }

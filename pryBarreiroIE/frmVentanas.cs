@@ -40,11 +40,25 @@ namespace pryBarreiroIE
             frmCargaVentas.ShowDialog();
         }
 
-        private void cmdLogin_Click(object sender, EventArgs e)
+        private void cmdBaseDatos_Click(object sender, EventArgs e)
         {
-            frmLogin frmLogin = new frmLogin();
+            frmBaseDatos frmLogin = new frmBaseDatos();
             this.Hide();
             frmLogin.ShowDialog();
+        }
+
+        private void cmdRegistros_Click(object sender, EventArgs e)
+        {
+            frmRegistros frmRegistros = new frmRegistros();
+            this.Hide();
+            frmRegistros.ShowDialog();
+        }
+
+        private void cmdInicioSesion_Click(object sender, EventArgs e)
+        {
+            frmInicioDeSesion frmInicioDeSesion = new frmInicioDeSesion();
+            this.Hide();
+            frmInicioDeSesion.ShowDialog();
         }
     }
 }

@@ -11,12 +11,14 @@ using pryBarreiroIE.Properties;
 
 namespace pryBarreiroIE
 {
-    
+
     internal class clsLogin
     {
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
+        OleDbDataAdapter adaptadorBD;
+        DataSet objDS;
 
         string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;" +
         "Data Source=" + @"../../Resources/EL_CLUB.accdb";
@@ -59,7 +61,7 @@ namespace pryBarreiroIE
             {
                 while (lectorBD.Read())
                 {
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], 
+                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
                     lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
                 }
             }
@@ -94,9 +96,65 @@ namespace pryBarreiroIE
             }
             lectorBD.Close();
         }
-        public void Registros() 
+        public void Registros()
         {
-            
+            try
+            {
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Registros";
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Registros");
+
+                DataTable objTabla = objDS.Tables["Registros"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sesión";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                MessageBox.Show("registro exitoso", "Registros");
+            }
+            catch (Exception error)
+            {
+                estadoConexion = error.Message;
+            }
+        }
+
+        public void InicioSesion(string Usuario, string contra) 
+        {
+            try
+            {
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Usuarios";
+
+                lectorBD = comandoBD.ExecuteReader();
+                if (lectorBD.HasRows)
+                {
+                    while (lectorBD.Read())
+                    {
+                        if (lectorBD[1].ToString() == Usuario && lectorBD[2].ToString() == contra)
+                        {
+                            MessageBox.Show("USUARIO EXISTE","Login");
+                        }
+                    }
+                }
+            }
+            catch (Exception EX)
+            {
+                estadoConexion = "Error:" + EX.Message;
+            }
         }
     }
 }
