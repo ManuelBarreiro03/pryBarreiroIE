@@ -66,12 +66,12 @@
             this.cmdCargaABM.TabIndex = 2;
             this.cmdCargaABM.Text = "Carga ABM ";
             this.cmdCargaABM.UseVisualStyleBackColor = true;
-            this.cmdCargaABM.Click += new System.EventHandler(this.button1_Click);
+            this.cmdCargaABM.Click += new System.EventHandler(this.cmdCargaABM_Click);
             // 
             // cmdLogin
             // 
             this.cmdLogin.Location = new System.Drawing.Point(197, 90);
-            this.cmdLogin.Name = "cmdBaseDatos";
+            this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(179, 61);
             this.cmdLogin.TabIndex = 3;
             this.cmdLogin.Text = "Base de Datos";

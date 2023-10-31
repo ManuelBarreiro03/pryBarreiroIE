@@ -12,6 +12,8 @@ namespace pryBarreiroIE
 {
     public partial class frmInicioDeSesion : Form
     {
+        int contador;
+
         public frmInicioDeSesion()
         {
             InitializeComponent();
@@ -19,23 +21,31 @@ namespace pryBarreiroIE
 
         private void cmdVolver_Click(object sender, EventArgs e)
         {
-            frmVentanas frmVentanas = new frmVentanas();
-            this.Hide();
-            frmVentanas.ShowDialog();
+            this.Close();
         }
 
         private void cmdAceptar_Click(object sender, EventArgs e)
         {
             string Usuario, contrasena;
-            int contador = 0;
             clsLogin clsLogin = new clsLogin();
             Usuario = txtUsuarios.Text;
             contrasena = txtContrasena.Text;
-            clsLogin.InicioSesion(Usuario, contrasena, contador);
-            if (contador==3)
+            this.Hide();
+            clsLogin.InicioSesion(Usuario, contrasena);
+            this.Show();
+            contador++;
+            if (contador>=3)
             {
                 this.Close();
             }
+        }
+
+        private void cmdRegistrar_Click(object sender, EventArgs e)
+        {
+            frmRegistroUsuario frmRegistroUsuario = new frmRegistroUsuario();
+            this.Hide();
+            frmRegistroUsuario.ShowDialog();
+            this.Close();
         }
     }
 }

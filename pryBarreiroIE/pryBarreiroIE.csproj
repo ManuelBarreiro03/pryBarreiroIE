@@ -93,6 +93,12 @@
     <Compile Include="frmRegistros.Designer.cs">
       <DependentUpon>frmRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroUsuario.Designer.cs">
+      <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentanas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistros.resx">
       <DependentUpon>frmRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroUsuario.resx">
+      <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanas.resx">
       <DependentUpon>frmVentanas.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace pryBarreiroIE
             frmCarpetas.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmdCargaABM_Click(object sender, EventArgs e)
         {
             frmCargaABM frmCargaVentas = new frmCargaABM();
             this.Hide();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaseDatos));
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.cmdBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBaseDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de Datos";

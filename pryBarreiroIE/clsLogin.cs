@@ -8,6 +8,7 @@ using System.Data.OleDb;
 using System.Data;
 using System.Windows.Forms;
 using pryBarreiroIE.Properties;
+using System.IO;
 
 namespace pryBarreiroIE
 {
@@ -171,11 +172,11 @@ namespace pryBarreiroIE
             }
         }
 
-        public void InicioSesion(string Usuario, string contra, int contador) 
+        public void InicioSesion(string Usuario, string contra)
         {
-            bool seEncuentra = false;
             try
             {
+                bool seEncuentra = false;
                 ConectarBD();
                 comandoBD = new OleDbCommand();
                 comandoBD.Connection = conexionBD;
@@ -189,17 +190,18 @@ namespace pryBarreiroIE
                     {
                         if (lectorBD[1].ToString() == Usuario && lectorBD[2].ToString() == contra)
                         {
-                            MessageBox.Show("USUARIO EXISTE", "Login");
                             seEncuentra = true;
+                            frmVentanas frmVentanas = new frmVentanas();
+                            frmVentanas.ShowDialog();
+                            break;
                         }
                     }
-                    lectorBD.Close();
                 }
                 if (seEncuentra == false)
                 {
-                    MessageBox.Show("Usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    contador++;
+                    MessageBox.Show("Usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
+                    lectorBD.Close();
             }
             catch (Exception EX)
             {
@@ -210,24 +212,48 @@ namespace pryBarreiroIE
         {
             try
             {
-                adaptadorBD = new OleDbDataAdapter(comandoBD);
-                objDS = new DataSet();
-                adaptadorBD.Fill(objDS, "Usuarios");
+                bool seEncuentra = false;
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Usuarios";
+               
+                lectorBD = comandoBD.ExecuteReader();
+                if (lectorBD.HasRows)
+                {
+                    while (lectorBD.Read())
+                    {
+                        if (lectorBD[1].ToString() == Usuario)
+                        {
+                            MessageBox.Show("Usuario ya existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            seEncuentra = true;
+                        }
+                    }
+                    lectorBD.Close();
+                    if (seEncuentra == false)
+                    {
+                        adaptadorBD = new OleDbDataAdapter(comandoBD);
+                        objDS = new DataSet();
+                        adaptadorBD.Fill(objDS, "Usuarios");
 
-                DataTable objTabla = objDS.Tables["Usuarios"];
-                DataRow nuevoRegistro = objTabla.NewRow();
+                        DataTable objTabla = objDS.Tables["Usuarios"];
+                        DataRow nuevoRegistro = objTabla.NewRow();
 
-                nuevoRegistro["Usuario"] = Usuario;
-                nuevoRegistro["Contrasena"] = contra;
+                        nuevoRegistro["Usuario"] = Usuario;
+                        nuevoRegistro["Contrasena"] = contra;
 
-                objTabla.Rows.Add(nuevoRegistro);
+                        objTabla.Rows.Add(nuevoRegistro);
 
-                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(objDS, "Usuarios");
+                        OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                        adaptadorBD.Update(objDS, "Usuarios");
+                        MessageBox.Show("Usuario Registrado con Exito", "Registro", MessageBoxButtons.OK);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show(ex.ToString(), "Fatal Error");
             }
         }
     }

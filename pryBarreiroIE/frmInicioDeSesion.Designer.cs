@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioDeSesion));
             this.cmdAceptar = new System.Windows.Forms.Button();
             this.cmdVolver = new System.Windows.Forms.Button();
             this.txtUsuarios = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.cmdAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdAceptar.Name = "cmdAceptar";
             this.cmdAceptar.Size = new System.Drawing.Size(105, 43);
-            this.cmdAceptar.TabIndex = 0;
+            this.cmdAceptar.TabIndex = 2;
             this.cmdAceptar.Text = "Aceptar";
             this.cmdAceptar.UseVisualStyleBackColor = true;
             this.cmdAceptar.Click += new System.EventHandler(this.cmdAceptar_Click);
@@ -54,7 +55,7 @@
             this.cmdVolver.Margin = new System.Windows.Forms.Padding(4);
             this.cmdVolver.Name = "cmdVolver";
             this.cmdVolver.Size = new System.Drawing.Size(105, 43);
-            this.cmdVolver.TabIndex = 1;
+            this.cmdVolver.TabIndex = 4;
             this.cmdVolver.Text = "Cerrar";
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
@@ -66,7 +67,7 @@
             this.txtUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuarios.Name = "txtUsuarios";
             this.txtUsuarios.Size = new System.Drawing.Size(230, 23);
-            this.txtUsuarios.TabIndex = 2;
+            this.txtUsuarios.TabIndex = 0;
             // 
             // txtContrasena
             // 
@@ -75,7 +76,7 @@
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(230, 23);
-            this.txtContrasena.TabIndex = 3;
+            this.txtContrasena.TabIndex = 1;
             // 
             // lblUsuario
             // 
@@ -105,15 +106,16 @@
             this.cmdRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(105, 43);
-            this.cmdRegistrar.TabIndex = 6;
+            this.cmdRegistrar.TabIndex = 3;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // frmInicioDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 169);
+            this.ClientSize = new System.Drawing.Size(360, 156);
             this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
@@ -122,6 +124,7 @@
             this.Controls.Add(this.cmdVolver);
             this.Controls.Add(this.cmdAceptar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmInicioDeSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
