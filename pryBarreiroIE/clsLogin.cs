@@ -65,8 +65,30 @@ namespace pryBarreiroIE
                     lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
                 }
             }
+            lectorBD.Close();
+
+            comandoBD = new OleDbCommand();
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "Registros";
+
+            adaptadorBD = new OleDbDataAdapter(comandoBD);
+            objDS = new DataSet();
+            adaptadorBD.Fill(objDS, "Registros");
+
+            DataTable objTabla = objDS.Tables["Registros"];
+            DataRow nuevoRegistro = objTabla.NewRow();
+
+            nuevoRegistro["Categoria"] = "Conexion BD";
+            nuevoRegistro["FechaHora"] = DateTime.Now;
+            nuevoRegistro["Descripcion"] = "Conexion exitosa";
+
+            objTabla.Rows.Add(nuevoRegistro);
+
+            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+            adaptadorBD.Update(objDS, "Registros");
         }
-        public void BuscarPorCodigo(int codigoSocio, DataGridView grilla)
+        public void BuscarPorCodigo(string codigoSocio, DataGridView grilla)
         {
             ConectarBD();
             comandoBD = new OleDbCommand();
@@ -81,7 +103,7 @@ namespace pryBarreiroIE
                 bool seEncuentra = false;
                 while (lectorBD.Read())
                 {
-                    if (int.Parse(lectorBD[0].ToString()) == codigoSocio)
+                    if (lectorBD[0].ToString() == codigoSocio || lectorBD[2].ToString() == codigoSocio)
                     {
                         grilla.Rows.Clear();
                         grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
@@ -95,6 +117,26 @@ namespace pryBarreiroIE
                 }
             }
             lectorBD.Close();
+            comandoBD = new OleDbCommand();
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "Registros";
+
+            adaptadorBD = new OleDbDataAdapter(comandoBD);
+            objDS = new DataSet();
+            adaptadorBD.Fill(objDS, "Registros");
+
+            DataTable objTabla = objDS.Tables["Registros"];
+            DataRow nuevoRegistro = objTabla.NewRow();
+
+            nuevoRegistro["Categoria"] = "Consulta";
+            nuevoRegistro["FechaHora"] = DateTime.Now;
+            nuevoRegistro["Descripcion"] = "Consulta exitosa";
+
+            objTabla.Rows.Add(nuevoRegistro);
+
+            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+            adaptadorBD.Update(objDS, "Registros");
         }
         public void Registros()
         {
@@ -106,7 +148,7 @@ namespace pryBarreiroIE
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
                 comandoBD.CommandText = "Registros";
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
-
+                objDS = new DataSet();
                 adaptadorBD.Fill(objDS, "Registros");
 
                 DataTable objTabla = objDS.Tables["Registros"];
@@ -119,7 +161,7 @@ namespace pryBarreiroIE
                 objTabla.Rows.Add(nuevoRegistro);
 
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                adaptadorBD.Update(objDS, "Logs");
+                adaptadorBD.Update(objDS, "Registros");
 
                 MessageBox.Show("registro exitoso", "Registros");
             }
@@ -131,6 +173,7 @@ namespace pryBarreiroIE
 
         public void InicioSesion(string Usuario, string contra) 
         {
+            bool seEncuentra = false;
             try
             {
                 ConectarBD();
@@ -146,9 +189,29 @@ namespace pryBarreiroIE
                     {
                         if (lectorBD[1].ToString() == Usuario && lectorBD[2].ToString() == contra)
                         {
-                            MessageBox.Show("USUARIO EXISTE","Login");
+                            MessageBox.Show("USUARIO EXISTE", "Login");
+                            seEncuentra = true;
                         }
                     }
+                    lectorBD.Close();
+                }
+                if (seEncuentra == false)
+                {
+                    MessageBox.Show("Usuario no existe \nSe creara un usuario nuevo", "Login");
+                    adaptadorBD = new OleDbDataAdapter(comandoBD);
+                    objDS = new DataSet();
+                    adaptadorBD.Fill(objDS, "Usuarios");
+
+                    DataTable objTabla = objDS.Tables["Usuarios"];
+                    DataRow nuevoRegistro = objTabla.NewRow();
+
+                    nuevoRegistro["Usuario"] = Usuario;
+                    nuevoRegistro["Contrasena"] = contra;
+
+                    objTabla.Rows.Add(nuevoRegistro);
+
+                    OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                    adaptadorBD.Update(objDS, "Usuarios");
                 }
             }
             catch (Exception EX)

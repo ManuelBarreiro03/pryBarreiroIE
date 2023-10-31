@@ -23,7 +23,7 @@ namespace pryBarreiroIE.Resources
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            objBaseDatos.BuscarPorCodigo(int.Parse(txtCodigoUsuario.Text), dgvGrilla);
+            objBaseDatos.BuscarPorCodigo(txtCodigoUsuario.Text, dgvGrilla);
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

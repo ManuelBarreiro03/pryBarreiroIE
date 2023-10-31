@@ -27,10 +27,15 @@ namespace pryBarreiroIE
         private void cmdAceptar_Click(object sender, EventArgs e)
         {
             string Usuario, contrasena;
+            int contador = 0;
             clsLogin clsLogin = new clsLogin();
             Usuario = txtUsuarios.Text;
             contrasena = txtContrasena.Text;
-            clsLogin.InicioSesion(Usuario, contrasena);
+            clsLogin.InicioSesion(Usuario, contrasena, contador);
+            if (contador==3)
+            {
+                this.Close();
+            }
         }
     }
 }

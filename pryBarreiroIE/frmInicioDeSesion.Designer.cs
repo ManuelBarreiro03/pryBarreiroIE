@@ -34,6 +34,7 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContrasena = new System.Windows.Forms.Label();
+            this.cmdRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdAceptar
@@ -49,12 +50,12 @@
             // 
             // cmdVolver
             // 
-            this.cmdVolver.Location = new System.Drawing.Point(164, 105);
+            this.cmdVolver.Location = new System.Drawing.Point(242, 105);
             this.cmdVolver.Margin = new System.Windows.Forms.Padding(4);
             this.cmdVolver.Name = "cmdVolver";
             this.cmdVolver.Size = new System.Drawing.Size(105, 43);
             this.cmdVolver.TabIndex = 1;
-            this.cmdVolver.Text = "Volver";
+            this.cmdVolver.Text = "Cerrar";
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
             // 
@@ -64,7 +65,7 @@
             this.txtUsuarios.Location = new System.Drawing.Point(117, 9);
             this.txtUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuarios.Name = "txtUsuarios";
-            this.txtUsuarios.Size = new System.Drawing.Size(152, 23);
+            this.txtUsuarios.Size = new System.Drawing.Size(230, 23);
             this.txtUsuarios.TabIndex = 2;
             // 
             // txtContrasena
@@ -73,7 +74,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(117, 55);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(152, 23);
+            this.txtContrasena.Size = new System.Drawing.Size(230, 23);
             this.txtContrasena.TabIndex = 3;
             // 
             // lblUsuario
@@ -98,11 +99,22 @@
             this.lblContrasena.TabIndex = 5;
             this.lblContrasena.Text = "Contraseña";
             // 
+            // cmdRegistrar
+            // 
+            this.cmdRegistrar.Location = new System.Drawing.Point(129, 105);
+            this.cmdRegistrar.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdRegistrar.Name = "cmdRegistrar";
+            this.cmdRegistrar.Size = new System.Drawing.Size(105, 43);
+            this.cmdRegistrar.TabIndex = 6;
+            this.cmdRegistrar.Text = "Registrar";
+            this.cmdRegistrar.UseVisualStyleBackColor = true;
+            // 
             // frmInicioDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 169);
+            this.ClientSize = new System.Drawing.Size(359, 169);
+            this.Controls.Add(this.cmdRegistrar);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.txtContrasena);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContrasena;
+        private System.Windows.Forms.Button cmdRegistrar;
     }
 }
