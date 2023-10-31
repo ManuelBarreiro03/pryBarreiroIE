@@ -16,5 +16,13 @@ namespace pryBarreiroIE
         {
             InitializeComponent();
         }
+
+        private void frmRegistros_Load(object sender, EventArgs e)
+        {
+            clsLogin objBaseDatos = new clsLogin();
+            objBaseDatos.ConectarBD();
+            lblEstadoConexion.Text = objBaseDatos.estadoConexion;
+            objBaseDatos.TraerDatos(dgvGrilla);
+        }
     }
 }

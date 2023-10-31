@@ -35,7 +35,6 @@
             this.cmdCargaABM = new System.Windows.Forms.Button();
             this.cmdLogin = new System.Windows.Forms.Button();
             this.cmdRegistros = new System.Windows.Forms.Button();
-            this.cmdInicioSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdSeguros
@@ -80,7 +79,7 @@
             // 
             // cmdRegistros
             // 
-            this.cmdRegistros.Location = new System.Drawing.Point(12, 168);
+            this.cmdRegistros.Location = new System.Drawing.Point(99, 157);
             this.cmdRegistros.Name = "cmdRegistros";
             this.cmdRegistros.Size = new System.Drawing.Size(179, 61);
             this.cmdRegistros.TabIndex = 4;
@@ -88,22 +87,11 @@
             this.cmdRegistros.UseVisualStyleBackColor = true;
             this.cmdRegistros.Click += new System.EventHandler(this.cmdRegistros_Click);
             // 
-            // cmdInicioSesion
-            // 
-            this.cmdInicioSesion.Location = new System.Drawing.Point(197, 168);
-            this.cmdInicioSesion.Name = "cmdInicioSesion";
-            this.cmdInicioSesion.Size = new System.Drawing.Size(179, 61);
-            this.cmdInicioSesion.TabIndex = 5;
-            this.cmdInicioSesion.Text = "Inicio de sesion";
-            this.cmdInicioSesion.UseVisualStyleBackColor = true;
-            this.cmdInicioSesion.Click += new System.EventHandler(this.cmdInicioSesion_Click);
-            // 
             // frmVentanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 247);
-            this.Controls.Add(this.cmdInicioSesion);
+            this.ClientSize = new System.Drawing.Size(392, 223);
             this.Controls.Add(this.cmdRegistros);
             this.Controls.Add(this.cmdLogin);
             this.Controls.Add(this.cmdCargaABM);
@@ -127,6 +115,5 @@
         private System.Windows.Forms.Button cmdCargaABM;
         private System.Windows.Forms.Button cmdLogin;
         private System.Windows.Forms.Button cmdRegistros;
-        private System.Windows.Forms.Button cmdInicioSesion;
     }
 }
