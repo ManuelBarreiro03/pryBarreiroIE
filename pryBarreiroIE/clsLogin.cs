@@ -261,7 +261,7 @@ namespace pryBarreiroIE
             comandoBD = new OleDbCommand();
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
+            comandoBD.CommandText = "Registros";
             grilla.Columns.Add("Categoria", "Categoria");
             grilla.Columns.Add("Fecha y Hora", "Fecha y Hora");
             grilla.Columns.Add("Descripcion", "Descripcion");
@@ -272,7 +272,7 @@ namespace pryBarreiroIE
             {
                 while (lectorBD.Read())
                 {
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3];
+                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3]);
                 }
             }
             lectorBD.Close();

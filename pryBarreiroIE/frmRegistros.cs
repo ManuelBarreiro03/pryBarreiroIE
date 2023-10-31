@@ -22,7 +22,7 @@ namespace pryBarreiroIE
             clsLogin objBaseDatos = new clsLogin();
             objBaseDatos.ConectarBD();
             lblEstadoConexion.Text = objBaseDatos.estadoConexion;
-            objBaseDatos.TraerDatos(dgvGrilla);
+            objBaseDatos.TraerLogs(dgvGrilla);
         }
     }
 }

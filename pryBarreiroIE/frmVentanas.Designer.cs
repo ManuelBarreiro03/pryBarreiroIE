@@ -79,7 +79,7 @@
             // 
             // cmdRegistros
             // 
-            this.cmdRegistros.Location = new System.Drawing.Point(99, 157);
+            this.cmdRegistros.Location = new System.Drawing.Point(108, 157);
             this.cmdRegistros.Name = "cmdRegistros";
             this.cmdRegistros.Size = new System.Drawing.Size(179, 61);
             this.cmdRegistros.TabIndex = 4;

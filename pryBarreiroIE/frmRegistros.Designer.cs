@@ -41,7 +41,8 @@
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrilla.Location = new System.Drawing.Point(12, 12);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(520, 228);
+            this.dgvGrilla.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvGrilla.Size = new System.Drawing.Size(521, 233);
             this.dgvGrilla.TabIndex = 4;
             // 
             // statusStrip1
@@ -50,7 +51,7 @@
             this.lblEstadoConexion});
             this.statusStrip1.Location = new System.Drawing.Point(0, 248);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(537, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(545, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -64,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 270);
+            this.ClientSize = new System.Drawing.Size(545, 270);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvGrilla);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
