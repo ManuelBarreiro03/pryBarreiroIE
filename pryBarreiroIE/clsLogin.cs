@@ -171,7 +171,7 @@ namespace pryBarreiroIE
             }
         }
 
-        public void InicioSesion(string Usuario, string contra) 
+        public void InicioSesion(string Usuario, string contra, int contador) 
         {
             bool seEncuentra = false;
             try
@@ -197,26 +197,37 @@ namespace pryBarreiroIE
                 }
                 if (seEncuentra == false)
                 {
-                    MessageBox.Show("Usuario no existe \nSe creara un usuario nuevo", "Login");
-                    adaptadorBD = new OleDbDataAdapter(comandoBD);
-                    objDS = new DataSet();
-                    adaptadorBD.Fill(objDS, "Usuarios");
-
-                    DataTable objTabla = objDS.Tables["Usuarios"];
-                    DataRow nuevoRegistro = objTabla.NewRow();
-
-                    nuevoRegistro["Usuario"] = Usuario;
-                    nuevoRegistro["Contrasena"] = contra;
-
-                    objTabla.Rows.Add(nuevoRegistro);
-
-                    OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                    adaptadorBD.Update(objDS, "Usuarios");
+                    MessageBox.Show("Usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    contador++;
                 }
             }
             catch (Exception EX)
             {
                 estadoConexion = "Error:" + EX.Message;
+            }
+        }
+        public void RegistroUsuario(string Usuario, string contra) 
+        {
+            try
+            {
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+                objDS = new DataSet();
+                adaptadorBD.Fill(objDS, "Usuarios");
+
+                DataTable objTabla = objDS.Tables["Usuarios"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Usuario"] = Usuario;
+                nuevoRegistro["Contrasena"] = contra;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Usuarios");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
             }
         }
     }
