@@ -36,118 +36,45 @@ namespace pryBarreiroIE
                 conexionBD.Open();
                 estadoConexion = "Conectado";
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                estadoConexion = "Error:" + EX.Message;
+                MessageBox.Show(ex.ToString(), "Fatal Error");
             }
         }
         public void TraerDatos(DataGridView grilla)
         {
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
-            grilla.Columns.Add("Id", "Id");
-            grilla.Columns.Add("Nombre", "Nombre");
-            grilla.Columns.Add("Apellido", "Apellido");
-            grilla.Columns.Add("Lugar", "Lugar");
-            grilla.Columns.Add("Edad", "Edad");
-            grilla.Columns.Add("Sexo", "Sexo");
-            grilla.Columns.Add("Ingreso", "Ingreso");
-            grilla.Columns.Add("Puntaje", "Puntaje");
-
-            lectorBD = comandoBD.ExecuteReader();
-
-            if (lectorBD.HasRows)
-            {
-                while (lectorBD.Read())
-                {
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
-                    lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
-                }
-            }
-            lectorBD.Close();
-
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "Registros";
-
-            adaptadorBD = new OleDbDataAdapter(comandoBD);
-            objDS = new DataSet();
-            adaptadorBD.Fill(objDS, "Registros");
-
-            DataTable objTabla = objDS.Tables["Registros"];
-            DataRow nuevoRegistro = objTabla.NewRow();
-
-            nuevoRegistro["Categoria"] = "Conexion BD";
-            nuevoRegistro["FechaHora"] = DateTime.Now;
-            nuevoRegistro["Descripcion"] = "Conexion exitosa";
-
-            objTabla.Rows.Add(nuevoRegistro);
-
-            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-            adaptadorBD.Update(objDS, "Registros");
-        }
-        public void BuscarPorCodigo(string codigoSocio, DataGridView grilla)
-        {
-            ConectarBD();
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
-
-            lectorBD = comandoBD.ExecuteReader();
-
-            if (lectorBD.HasRows)
-            {
-                bool seEncuentra = false;
-                while (lectorBD.Read())
-                {
-                    if (lectorBD[0].ToString() == codigoSocio || lectorBD[2].ToString() == codigoSocio)
-                    {
-                        grilla.Rows.Clear();
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
-                        lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
-                        seEncuentra = true;
-                    }
-                }
-                if (seEncuentra == false)
-                {
-                    MessageBox.Show("no existe", "consulta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                }
-            }
-            lectorBD.Close();
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "Registros";
-
-            adaptadorBD = new OleDbDataAdapter(comandoBD);
-            objDS = new DataSet();
-            adaptadorBD.Fill(objDS, "Registros");
-
-            DataTable objTabla = objDS.Tables["Registros"];
-            DataRow nuevoRegistro = objTabla.NewRow();
-
-            nuevoRegistro["Categoria"] = "Consulta";
-            nuevoRegistro["FechaHora"] = DateTime.Now;
-            nuevoRegistro["Descripcion"] = "Consulta exitosa";
-
-            objTabla.Rows.Add(nuevoRegistro);
-
-            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-            adaptadorBD.Update(objDS, "Registros");
-        }
-        public void Registros()
-        {
             try
             {
-                ConectarBD();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "SOCIOS";
+                grilla.Columns.Add("Id", "Id");
+                grilla.Columns.Add("Nombre", "Nombre");
+                grilla.Columns.Add("Apellido", "Apellido");
+                grilla.Columns.Add("Lugar", "Lugar");
+                grilla.Columns.Add("Edad", "Edad");
+                grilla.Columns.Add("Sexo", "Sexo");
+                grilla.Columns.Add("Ingreso", "Ingreso");
+                grilla.Columns.Add("Puntaje", "Puntaje");
+
+                lectorBD = comandoBD.ExecuteReader();
+
+                if (lectorBD.HasRows)
+                {
+                    while (lectorBD.Read())
+                    {
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
+                        lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
+                    }
+                }
+                lectorBD.Close();
+
                 comandoBD = new OleDbCommand();
                 comandoBD.Connection = conexionBD;
                 comandoBD.CommandType = System.Data.CommandType.TableDirect;
                 comandoBD.CommandText = "Registros";
+
                 adaptadorBD = new OleDbDataAdapter(comandoBD);
                 objDS = new DataSet();
                 adaptadorBD.Fill(objDS, "Registros");
@@ -155,20 +82,76 @@ namespace pryBarreiroIE
                 DataTable objTabla = objDS.Tables["Registros"];
                 DataRow nuevoRegistro = objTabla.NewRow();
 
-                nuevoRegistro["Categoria"] = "Inicio Sesión";
+                nuevoRegistro["Categoria"] = "Conexion BD";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
-                nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["Descripcion"] = "Conexion exitosa";
 
                 objTabla.Rows.Add(nuevoRegistro);
 
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
                 adaptadorBD.Update(objDS, "Registros");
 
-                MessageBox.Show("registro exitoso", "Registros");
             }
-            catch (Exception error)
+            catch (Exception ex)
             {
-                estadoConexion = error.Message;
+                MessageBox.Show(ex.ToString(), "Fatal Error");
+            }
+        }
+        public void BuscarPorCodigo(string codigoSocio, DataGridView grilla)
+        {
+            try
+            {
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "SOCIOS";
+
+                lectorBD = comandoBD.ExecuteReader();
+
+                if (lectorBD.HasRows)
+                {
+                    bool seEncuentra = false;
+                    while (lectorBD.Read())
+                    {
+                        if (lectorBD[0].ToString() == codigoSocio || lectorBD[2].ToString() == codigoSocio)
+                        {
+                            grilla.Rows.Clear();
+                            grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3],
+                            lectorBD[4], lectorBD[5], lectorBD[6], lectorBD[7]);
+                            seEncuentra = true;
+                        }
+                    }
+                    if (seEncuentra == false)
+                    {
+                        MessageBox.Show("no existe", "consulta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                }
+                lectorBD.Close();
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Registros";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+                objDS = new DataSet();
+                adaptadorBD.Fill(objDS, "Registros");
+
+                DataTable objTabla = objDS.Tables["Registros"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Consulta";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Consulta";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Registros");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Fatal Error");
             }
         }
         public void InicioSesion(string Usuario, string contra)
@@ -190,6 +173,23 @@ namespace pryBarreiroIE
                         if (lectorBD[1].ToString() == Usuario && lectorBD[2].ToString() == contra)
                         {
                             seEncuentra = true;
+                            comandoBD.CommandText = "Registros";
+                            adaptadorBD = new OleDbDataAdapter(comandoBD);
+                            objDS = new DataSet();
+                            adaptadorBD.Fill(objDS, "Registros");
+
+                            DataTable objTabla = objDS.Tables["Registros"];
+                            DataRow nuevoRegistro = objTabla.NewRow();
+
+                            nuevoRegistro["Categoria"] = "Inicio Sesión";
+                            nuevoRegistro["FechaHora"] = DateTime.Now;
+                            nuevoRegistro["Descripcion"] = "Inicio de sesion exitoso";
+
+                            objTabla.Rows.Add(nuevoRegistro);
+
+                            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                            adaptadorBD.Update(objDS, "Registros");
+
                             frmVentanas frmVentanas = new frmVentanas();
                             frmVentanas.ShowDialog();
                             break;
@@ -199,12 +199,29 @@ namespace pryBarreiroIE
                 if (seEncuentra == false)
                 {
                     MessageBox.Show("Usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    comandoBD.CommandText = "Registros";
+                    adaptadorBD = new OleDbDataAdapter(comandoBD);
+                    objDS = new DataSet();
+                    adaptadorBD.Fill(objDS, "Registros");
+
+                    DataTable objTabla = objDS.Tables["Registros"];
+                    DataRow nuevoRegistro = objTabla.NewRow();
+
+                    nuevoRegistro["Categoria"] = "Inicio Sesión";
+                    nuevoRegistro["FechaHora"] = DateTime.Now;
+                    nuevoRegistro["Descripcion"] = "Inicio de sesion fallido";
+
+                    objTabla.Rows.Add(nuevoRegistro);
+
+                    OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                    adaptadorBD.Update(objDS, "Registros");
                 }
                     lectorBD.Close();
+
             }
             catch (Exception EX)
             {
-                estadoConexion = "Error:" + EX.Message;
+                estadoConexion = "Fatal Error" + EX.Message;
             }
         }
         public void RegistroUsuario(string Usuario, string contra) 
@@ -248,6 +265,24 @@ namespace pryBarreiroIE
                         OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
                         adaptadorBD.Update(objDS, "Usuarios");
                         MessageBox.Show("Usuario Registrado con Exito", "Registro", MessageBoxButtons.OK);
+                        comandoBD.CommandText = "Registros";
+                        adaptadorBD = new OleDbDataAdapter(comandoBD);
+                        objDS = new DataSet();
+                        adaptadorBD.Fill(objDS, "Registros");
+
+                        objTabla = objDS.Tables["Registros"];
+                        nuevoRegistro = objTabla.NewRow();
+
+                        nuevoRegistro["Categoria"] = "Inicio Sesión";
+                        nuevoRegistro["FechaHora"] = DateTime.Now;
+                        nuevoRegistro["Descripcion"] = "Usuario Registrado con Exito";
+
+                        objTabla.Rows.Add(nuevoRegistro);
+
+                        constructor = new OleDbCommandBuilder(adaptadorBD);
+                        adaptadorBD.Update(objDS, "Registros");
+
+                        MessageBox.Show("registro exitoso", "Registros");
                     }
                 }
             }
@@ -258,45 +293,52 @@ namespace pryBarreiroIE
         }
         public void TraerLogs(DataGridView grilla)
         {
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "Registros";
-            grilla.Columns.Add("Categoria", "Categoria");
-            grilla.Columns.Add("Fecha y Hora", "Fecha y Hora");
-            grilla.Columns.Add("Descripcion", "Descripcion");
-
-            lectorBD = comandoBD.ExecuteReader();
-
-            if (lectorBD.HasRows)
+            try
             {
-                while (lectorBD.Read())
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Registros";
+                grilla.Columns.Add("Categoria", "Categoria");
+                grilla.Columns.Add("Fecha y Hora", "Fecha y Hora");
+                grilla.Columns.Add("Descripcion", "Descripcion");
+
+                lectorBD = comandoBD.ExecuteReader();
+
+                if (lectorBD.HasRows)
                 {
-                    grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3]);
+                    while (lectorBD.Read())
+                    {
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3]);
+                    }
                 }
+                lectorBD.Close();
+
+                comandoBD = new OleDbCommand();
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Registros";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+                objDS = new DataSet();
+                adaptadorBD.Fill(objDS, "Registros");
+
+                DataTable objTabla = objDS.Tables["Registros"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Registros";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Consulta Logs";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Registros");
             }
-            lectorBD.Close();
-
-            comandoBD = new OleDbCommand();
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "Registros";
-
-            adaptadorBD = new OleDbDataAdapter(comandoBD);
-            objDS = new DataSet();
-            adaptadorBD.Fill(objDS, "Registros");
-
-            DataTable objTabla = objDS.Tables["Registros"];
-            DataRow nuevoRegistro = objTabla.NewRow();
-
-            nuevoRegistro["Categoria"] = "Registros";
-            nuevoRegistro["FechaHora"] = DateTime.Now;
-            nuevoRegistro["Descripcion"] = "Consulta Logs";
-
-            objTabla.Rows.Add(nuevoRegistro);
-
-            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-            adaptadorBD.Update(objDS, "Registros");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Fatal Error");
+            }
         }
     }
 }
