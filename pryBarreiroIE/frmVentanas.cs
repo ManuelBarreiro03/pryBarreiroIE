@@ -60,5 +60,18 @@ namespace pryBarreiroIE
             this.Hide();
             frmInicioDeSesion.ShowDialog();
         }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdCerrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdCerrar_Click(sender, e);
+            }
+        }
     }
 }

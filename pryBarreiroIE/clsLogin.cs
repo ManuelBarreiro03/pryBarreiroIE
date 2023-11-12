@@ -173,23 +173,6 @@ namespace pryBarreiroIE
                         if (lectorBD[1].ToString() == Usuario && lectorBD[2].ToString() == contra)
                         {
                             seEncuentra = true;
-                            comandoBD.CommandText = "Registros";
-                            adaptadorBD = new OleDbDataAdapter(comandoBD);
-                            objDS = new DataSet();
-                            adaptadorBD.Fill(objDS, "Registros");
-
-                            DataTable objTabla = objDS.Tables["Registros"];
-                            DataRow nuevoRegistro = objTabla.NewRow();
-
-                            nuevoRegistro["Categoria"] = "Inicio Sesión";
-                            nuevoRegistro["FechaHora"] = DateTime.Now;
-                            nuevoRegistro["Descripcion"] = "Inicio de sesion exitoso";
-
-                            objTabla.Rows.Add(nuevoRegistro);
-
-                            OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
-                            adaptadorBD.Update(objDS, "Registros");
-
                             frmVentanas frmVentanas = new frmVentanas();
                             frmVentanas.ShowDialog();
                             break;
@@ -216,7 +199,27 @@ namespace pryBarreiroIE
                     OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
                     adaptadorBD.Update(objDS, "Registros");
                 }
-                    lectorBD.Close();
+                if (seEncuentra == true)
+                {
+                    MessageBox.Show("Usuario no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    comandoBD.CommandText = "Registros";
+                    adaptadorBD = new OleDbDataAdapter(comandoBD);
+                    objDS = new DataSet();
+                    adaptadorBD.Fill(objDS, "Registros");
+
+                    DataTable objTabla = objDS.Tables["Registros"];
+                    DataRow nuevoRegistro = objTabla.NewRow();
+
+                    nuevoRegistro["Categoria"] = "Inicio Sesión";
+                    nuevoRegistro["FechaHora"] = DateTime.Now;
+                    nuevoRegistro["Descripcion"] = "Inicio de sesion exitoso";
+
+                    objTabla.Rows.Add(nuevoRegistro);
+
+                    OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                    adaptadorBD.Update(objDS, "Registros");
+                }
+                lectorBD.Close();
 
             }
             catch (Exception EX)

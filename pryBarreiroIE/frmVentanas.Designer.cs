@@ -35,6 +35,7 @@
             this.cmdCargaABM = new System.Windows.Forms.Button();
             this.cmdLogin = new System.Windows.Forms.Button();
             this.cmdRegistros = new System.Windows.Forms.Button();
+            this.cmdCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdSeguros
@@ -49,7 +50,7 @@
             // 
             // cmdUbicacionCarpeta
             // 
-            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 90);
+            this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 84);
             this.cmdUbicacionCarpeta.Name = "cmdUbicacionCarpeta";
             this.cmdUbicacionCarpeta.Size = new System.Drawing.Size(179, 61);
             this.cmdUbicacionCarpeta.TabIndex = 1;
@@ -69,7 +70,7 @@
             // 
             // cmdLogin
             // 
-            this.cmdLogin.Location = new System.Drawing.Point(197, 90);
+            this.cmdLogin.Location = new System.Drawing.Point(197, 84);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(179, 61);
             this.cmdLogin.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             // cmdRegistros
             // 
-            this.cmdRegistros.Location = new System.Drawing.Point(108, 157);
+            this.cmdRegistros.Location = new System.Drawing.Point(12, 156);
             this.cmdRegistros.Name = "cmdRegistros";
             this.cmdRegistros.Size = new System.Drawing.Size(179, 61);
             this.cmdRegistros.TabIndex = 4;
@@ -87,11 +88,23 @@
             this.cmdRegistros.UseVisualStyleBackColor = true;
             this.cmdRegistros.Click += new System.EventHandler(this.cmdRegistros_Click);
             // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Location = new System.Drawing.Point(197, 156);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(179, 61);
+            this.cmdCerrar.TabIndex = 5;
+            this.cmdCerrar.Text = "Cerrar";
+            this.cmdCerrar.UseVisualStyleBackColor = true;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            this.cmdCerrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdCerrar_KeyPress);
+            // 
             // frmVentanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 223);
+            this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdRegistros);
             this.Controls.Add(this.cmdLogin);
             this.Controls.Add(this.cmdCargaABM);
@@ -115,5 +128,6 @@
         private System.Windows.Forms.Button cmdCargaABM;
         private System.Windows.Forms.Button cmdLogin;
         private System.Windows.Forms.Button cmdRegistros;
+        private System.Windows.Forms.Button cmdCerrar;
     }
 }

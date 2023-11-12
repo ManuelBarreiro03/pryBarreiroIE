@@ -216,6 +216,7 @@
             this.cmdVolver1.Text = "Volver";
             this.cmdVolver1.UseVisualStyleBackColor = true;
             this.cmdVolver1.Click += new System.EventHandler(this.cmdVolver1_Click);
+            this.cmdVolver1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdVolver1_KeyPress);
             // 
             // dgvProveedores
             // 
@@ -590,6 +591,7 @@
             this.cmdVerificar2.Text = "Verificar";
             this.cmdVerificar2.UseVisualStyleBackColor = true;
             this.cmdVerificar2.Click += new System.EventHandler(this.cmdVerificar2_Click);
+            this.cmdVerificar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdVerificar2_KeyPress);
             // 
             // dgvAseguradores
             // 
@@ -621,6 +623,7 @@
             this.cmdVolver2.Text = "Volver";
             this.cmdVolver2.UseVisualStyleBackColor = true;
             this.cmdVolver2.Click += new System.EventHandler(this.cmdVolver2_Click);
+            this.cmdVolver2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdVolver2_KeyPress);
             // 
             // cmdModificacion2
             // 
@@ -657,7 +660,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga ABM";
             this.Load += new System.EventHandler(this.frmCargaABM_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmCargaABM_KeyPress);
             this.tbpProveedores.ResumeLayout(false);
             this.tbpProveedores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();

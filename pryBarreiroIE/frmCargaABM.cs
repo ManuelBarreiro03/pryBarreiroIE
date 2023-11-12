@@ -320,9 +320,28 @@ namespace pryBarreiroIE
             cmdModificacion1.Enabled = false;
         }
 
-        private void frmCargaABM_KeyPress(object sender, KeyPressEventArgs e)
+        private void cmdVerificar2_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
+            { 
+                cmdVerificar2_Click(sender, e);
+            }
+        }
 
+        private void cmdVolver2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void cmdVolver1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
         }
     }
 }

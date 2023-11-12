@@ -34,8 +34,17 @@ namespace pryBarreiroIE
             clsLogin.InicioSesion(Usuario, contrasena);
             this.Show();
             contador++;
+            if (contador == 1)
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrecto","error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (contador == 2)
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrecto", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if (contador>=3)
             {
+                MessageBox.Show("limite de intentos alcanzado", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
@@ -46,6 +55,30 @@ namespace pryBarreiroIE
             this.Hide();
             frmRegistroUsuario.ShowDialog();
             this.Close();
+        }
+
+        private void txtUsuarios_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdAceptar_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver_Click(sender, e);
+            }
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdAceptar_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver_Click(sender, e);
+            }
         }
     }
 }

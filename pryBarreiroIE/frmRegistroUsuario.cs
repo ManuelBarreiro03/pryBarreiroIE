@@ -35,5 +35,13 @@ namespace pryBarreiroIE
                 MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cmdCancelar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdCancelar_Click(sender, e);
+            }
+        }
     }
 }

@@ -68,6 +68,7 @@
             this.txtUsuarios.Name = "txtUsuarios";
             this.txtUsuarios.Size = new System.Drawing.Size(230, 23);
             this.txtUsuarios.TabIndex = 0;
+            this.txtUsuarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuarios_KeyPress);
             // 
             // txtContrasena
             // 
@@ -77,6 +78,7 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(230, 23);
             this.txtContrasena.TabIndex = 1;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // lblUsuario
             // 

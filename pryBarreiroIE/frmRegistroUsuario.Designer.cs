@@ -58,6 +58,7 @@
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            this.cmdCancelar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdCancelar_KeyPress);
             // 
             // lblUsuario
             // 

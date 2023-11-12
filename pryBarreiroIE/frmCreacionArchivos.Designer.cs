@@ -137,6 +137,7 @@
             this.cmdVolver.Text = "Volver";
             this.cmdVolver.UseVisualStyleBackColor = true;
             this.cmdVolver.Click += new System.EventHandler(this.cmdVolver_Click);
+            this.cmdVolver.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdVolver_KeyPress);
             // 
             // cmdCargarAseguradores
             // 
@@ -149,7 +150,7 @@
             this.cmdCargarAseguradores.UseVisualStyleBackColor = true;
             this.cmdCargarAseguradores.Click += new System.EventHandler(this.cmdCargarAseguradores_Click);
             // 
-            // frmCarpetas
+            // frmCreacionArchivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +168,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCarpetas";
+            this.Name = "frmCreacionArchivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creacion de archivos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();

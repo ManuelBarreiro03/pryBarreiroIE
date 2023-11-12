@@ -96,6 +96,14 @@ namespace pryBarreiroIE
             //frmGrilla frmGrilla = new frmGrilla();
             //frmGrilla.ShowDialog();
         }
+
+        private void cmdVolver_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver_Click(sender, e);
+            }
+        }
     }
 }
 
