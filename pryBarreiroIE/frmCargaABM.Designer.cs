@@ -234,6 +234,7 @@
             this.txtJurisdiccion1.Name = "txtJurisdiccion1";
             this.txtJurisdiccion1.Size = new System.Drawing.Size(147, 20);
             this.txtJurisdiccion1.TabIndex = 4;
+            this.txtJurisdiccion1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJurisdiccion1_KeyPress);
             // 
             // txtNExpte1
             // 
@@ -242,6 +243,7 @@
             this.txtNExpte1.Name = "txtNExpte1";
             this.txtNExpte1.Size = new System.Drawing.Size(147, 20);
             this.txtNExpte1.TabIndex = 3;
+            this.txtNExpte1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNExpte1_KeyPress);
             // 
             // txtDireccion1
             // 
@@ -250,6 +252,7 @@
             this.txtDireccion1.Name = "txtDireccion1";
             this.txtDireccion1.Size = new System.Drawing.Size(147, 20);
             this.txtDireccion1.TabIndex = 5;
+            this.txtDireccion1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion1_KeyPress);
             // 
             // txtApertura1
             // 
@@ -258,6 +261,7 @@
             this.txtApertura1.Name = "txtApertura1";
             this.txtApertura1.Size = new System.Drawing.Size(147, 20);
             this.txtApertura1.TabIndex = 2;
+            this.txtApertura1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApertura1_KeyPress);
             // 
             // txtLiquiResp1
             // 
@@ -266,6 +270,7 @@
             this.txtLiquiResp1.Name = "txtLiquiResp1";
             this.txtLiquiResp1.Size = new System.Drawing.Size(147, 20);
             this.txtLiquiResp1.TabIndex = 6;
+            this.txtLiquiResp1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLiquiResp1_KeyPress);
             // 
             // txtEntidad1
             // 
@@ -274,6 +279,7 @@
             this.txtEntidad1.Name = "txtEntidad1";
             this.txtEntidad1.Size = new System.Drawing.Size(147, 20);
             this.txtEntidad1.TabIndex = 1;
+            this.txtEntidad1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntidad1_KeyPress);
             // 
             // txtNumero1
             // 
@@ -282,6 +288,7 @@
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(54, 20);
             this.txtNumero1.TabIndex = 0;
+            this.txtNumero1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero1_KeyPress);
             // 
             // lblLiquiResp1
             // 
@@ -532,6 +539,7 @@
             this.txtLiquiResp2.Name = "txtLiquiResp2";
             this.txtLiquiResp2.Size = new System.Drawing.Size(147, 20);
             this.txtLiquiResp2.TabIndex = 7;
+            this.txtLiquiResp2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLiquiResp2_KeyPress);
             // 
             // txtDireccion2
             // 
@@ -540,6 +548,7 @@
             this.txtDireccion2.Name = "txtDireccion2";
             this.txtDireccion2.Size = new System.Drawing.Size(147, 20);
             this.txtDireccion2.TabIndex = 6;
+            this.txtDireccion2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion2_KeyPress);
             // 
             // txtJurisdiccion2
             // 
@@ -548,6 +557,7 @@
             this.txtJurisdiccion2.Name = "txtJurisdiccion2";
             this.txtJurisdiccion2.Size = new System.Drawing.Size(147, 20);
             this.txtJurisdiccion2.TabIndex = 5;
+            this.txtJurisdiccion2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJurisdiccion2_KeyPress);
             // 
             // txtNExpte2
             // 
@@ -556,6 +566,7 @@
             this.txtNExpte2.Name = "txtNExpte2";
             this.txtNExpte2.Size = new System.Drawing.Size(147, 20);
             this.txtNExpte2.TabIndex = 4;
+            this.txtNExpte2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNExpte2_KeyPress);
             // 
             // txtApertura2
             // 
@@ -564,6 +575,7 @@
             this.txtApertura2.Name = "txtApertura2";
             this.txtApertura2.Size = new System.Drawing.Size(147, 20);
             this.txtApertura2.TabIndex = 3;
+            this.txtApertura2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApertura2_KeyPress);
             // 
             // txtEntidad2
             // 
@@ -572,6 +584,7 @@
             this.txtEntidad2.Name = "txtEntidad2";
             this.txtEntidad2.Size = new System.Drawing.Size(147, 20);
             this.txtEntidad2.TabIndex = 2;
+            this.txtEntidad2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntidad2_KeyPress);
             // 
             // txtNumero2
             // 
@@ -580,6 +593,7 @@
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(54, 20);
             this.txtNumero2.TabIndex = 1;
+            this.txtNumero2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero2_KeyPress);
             // 
             // cmdVerificar2
             // 
@@ -591,7 +605,6 @@
             this.cmdVerificar2.Text = "Verificar";
             this.cmdVerificar2.UseVisualStyleBackColor = true;
             this.cmdVerificar2.Click += new System.EventHandler(this.cmdVerificar2_Click);
-            this.cmdVerificar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmdVerificar2_KeyPress);
             // 
             // dgvAseguradores
             // 

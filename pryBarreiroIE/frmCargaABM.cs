@@ -320,14 +320,6 @@ namespace pryBarreiroIE
             cmdModificacion1.Enabled = false;
         }
 
-        private void cmdVerificar2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
-            { 
-                cmdVerificar2_Click(sender, e);
-            }
-        }
-
         private void cmdVolver2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Escape))
@@ -338,6 +330,174 @@ namespace pryBarreiroIE
 
         private void cmdVolver1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtNumero2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtEntidad2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtApertura2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtNExpte2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtJurisdiccion2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtDireccion2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtLiquiResp2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar2_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver2_Click(sender, e);
+            }
+        }
+
+        private void txtNumero1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtEntidad1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtApertura1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtNExpte1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtJurisdiccion1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtDireccion1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdVolver1_Click(sender, e);
+            }
+        }
+
+        private void txtLiquiResp1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdVerificar1_Click(sender, e);
+            }
             if (e.KeyChar == Convert.ToChar(Keys.Escape))
             {
                 cmdVolver1_Click(sender, e);

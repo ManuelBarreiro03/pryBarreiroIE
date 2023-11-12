@@ -53,7 +53,7 @@
             this.cmdUbicacionCarpeta.Location = new System.Drawing.Point(12, 84);
             this.cmdUbicacionCarpeta.Name = "cmdUbicacionCarpeta";
             this.cmdUbicacionCarpeta.Size = new System.Drawing.Size(179, 61);
-            this.cmdUbicacionCarpeta.TabIndex = 1;
+            this.cmdUbicacionCarpeta.TabIndex = 2;
             this.cmdUbicacionCarpeta.Text = "Creacion de archivos";
             this.cmdUbicacionCarpeta.UseVisualStyleBackColor = true;
             this.cmdUbicacionCarpeta.Click += new System.EventHandler(this.cmdUbicacionCarpeta_Click);
@@ -63,7 +63,7 @@
             this.cmdCargaABM.Location = new System.Drawing.Point(197, 12);
             this.cmdCargaABM.Name = "cmdCargaABM";
             this.cmdCargaABM.Size = new System.Drawing.Size(179, 61);
-            this.cmdCargaABM.TabIndex = 2;
+            this.cmdCargaABM.TabIndex = 1;
             this.cmdCargaABM.Text = "Carga ABM ";
             this.cmdCargaABM.UseVisualStyleBackColor = true;
             this.cmdCargaABM.Click += new System.EventHandler(this.cmdCargaABM_Click);
@@ -116,6 +116,7 @@
             this.Name = "frmVentanas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventanas";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmVentanas_KeyPress);
             this.ResumeLayout(false);
 
         }

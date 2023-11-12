@@ -43,5 +43,29 @@ namespace pryBarreiroIE
                 cmdCancelar_Click(sender, e);
             }
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdRegistrar_Click(sender, e);
+            }
+        }
+
+        private void txtContarsena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdRegistrar_Click(sender, e);
+            }
+        }
+
+        private void txtContarsenaConfirmar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                cmdRegistrar_Click(sender, e);
+            }
+        }
     }
 }

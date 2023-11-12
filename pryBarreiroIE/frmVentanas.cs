@@ -73,5 +73,13 @@ namespace pryBarreiroIE
                 cmdCerrar_Click(sender, e);
             }
         }
+
+        private void frmVentanas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                cmdCerrar_Click(sender, e);
+            }
+        }
     }
 }

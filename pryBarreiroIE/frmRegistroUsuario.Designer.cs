@@ -96,6 +96,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(154, 20);
             this.txtUsuario.TabIndex = 5;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContarsena
             // 
@@ -103,6 +104,7 @@
             this.txtContarsena.Name = "txtContarsena";
             this.txtContarsena.Size = new System.Drawing.Size(154, 20);
             this.txtContarsena.TabIndex = 6;
+            this.txtContarsena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContarsena_KeyPress);
             // 
             // txtContarsenaConfirmar
             // 
@@ -110,6 +112,7 @@
             this.txtContarsenaConfirmar.Name = "txtContarsenaConfirmar";
             this.txtContarsenaConfirmar.Size = new System.Drawing.Size(154, 20);
             this.txtContarsenaConfirmar.TabIndex = 7;
+            this.txtContarsenaConfirmar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContarsenaConfirmar_KeyPress);
             // 
             // frmRegistroUsuario
             // 
